@@ -5,9 +5,11 @@ var projectRoot = path.resolve(__dirname, '../')
 
 module.exports = {
   entry: {
+    // 这是一个主文件包括其他模块
     app: './src/main.js'
   },
   output: {
+    // 编译的文件路径
     path: config.build.assetsRoot,
     publicPath: process.env.NODE_ENV === 'production' ? config.build.assetsPublicPath : config.dev.assetsPublicPath,
     filename: '[name].js'
@@ -33,6 +35,7 @@ module.exports = {
         exclude: /node_modules/
       },
       {
+        // js编译的校验规则
         test: /\.js$/,
         loader: 'eslint',
         include: projectRoot,
