@@ -6,6 +6,9 @@
 
 <script>
 export default {
+	// 等价于 function data(){
+	// return
+	// }
 	data(){
 		return {
 			// note: changing this line won't causes changes
