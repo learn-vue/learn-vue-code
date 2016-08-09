@@ -1,6 +1,45 @@
 
 ## VUE练习项目[ (Click Me)](https://learn-vue.github.io)
 
+### 目录结构
+
+```bash
+└─ learn-vue-code                           
+  ├─ build                                  
+  │  ├─ build.js                            
+  │  ├─ dev-client.js                       
+  │  ├─ dev-server.js                       
+  │  ├─ util.js                             
+  │  ├─ webpack.base.conf.js                # webpack配置
+  │  ├─ webpack.dev.conf.js                 # webpack配置
+  │  └─ webpack.prod.conf.js                # webpack配置
+  ├─ config                                 # 配置 
+  │  ├─ dev.env.js                           
+  │  ├─ index.js                             
+  │  ├─ prod.env.js                          
+  │  └─ test.env.js                         
+  ├─ learn-vue.github.io                    # 项目展示的地址
+  ├─ node_modules                           # 项目依赖的包 
+  ├─ src                                     
+  │  ├─ assets                              # 资源
+  │  ├─ components                          # 组件
+  │  ├─ pages                               # 页面
+  │  ├─ router                              # 路由管理
+  │  ├─ App.vue                             # 
+  │  ├─ main.js                             # main.js
+  │  └─ store.js                            # localstorge管理 
+  ├─ static                                  
+  ├─ .babelrc                                
+  ├─ .editorconfig                           
+  ├─ .eslintignore                           
+  ├─ .eslintrc.js                           # eslint配置
+  ├─ .gitignore                             # git配置
+  ├─ .project                                
+  ├─ index.html                             # 入口文件
+  ├─ package.json                           # 资源管理文件
+  └─ README.md                              # README
+```
+
 ### 一. 安装
 
 #### 第一步: 安装taobao镜像工具 (非常重要！！！)
@@ -60,6 +99,6 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 其他资源
 
 ```bash
-npm install vue-router   路由
+npm install vue-router  # 路由 http://router.vuejs.org/zh-cn/installation.html
 
 ```
