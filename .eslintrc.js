@@ -16,7 +16,8 @@ module.exports = {
 		'func-names':['error','never'],
 		'space-before-function-paren': ["error", "never"],
 		"space-before-blocks": [0, "always"],//不以新行开始的块{前面要不要有空格
-		"semi": [2, "always"],//语句强制分号结尾
+		// "semi": [2, "always"],//语句强制分号结尾
+		"semi": [0],//语句强制分号结尾
 		"semi-spacing": [0, {"before": false, "after": true}],//分号前后空格
 		"no-trailing-spaces": 1,//一行结束后面不要有空格
 		// allow paren-less arrow functions
