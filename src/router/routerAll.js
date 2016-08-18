@@ -9,6 +9,9 @@ import Index6 from 'src/pages/test/Index6.vue';
 
 export default
 	{
+		'/': {
+			component: Index
+		},
 		'/index1': {
 			component: Index1
 		},
@@ -52,5 +55,9 @@ export default
 					component: Index6
 				}
 			}
+		},
+		// not found handler
+		'*': {
+			component: Index
 		}
 	};
