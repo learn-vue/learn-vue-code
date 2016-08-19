@@ -100,5 +100,10 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 ```bash
 npm install vue-router  # 路由 http://router.vuejs.org/zh-cn/installation.html
+cnpm install vue-validator  #验证
 
+```
+
+```
+vue UI   http://hackersome.com/p/bravf/VueUI
 ```

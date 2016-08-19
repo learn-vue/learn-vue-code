@@ -13,7 +13,7 @@ export default
 			component: Layout,
 			subRoutes: {
 				'/': {
-					component: Index
+					component: Index // 首页
 				},
 				'/index': {
 					component: Index
@@ -43,6 +43,17 @@ export default
 				},
 				'/index': {
 					component: Index
+				},
+				'/components': {
+					component: require('src/pages/components/LeftBar.vue'),
+					subRoutes: {
+						'/': {
+							component: require('src/pages/components/Select2-demo.vue')
+						},
+						'/select2': {
+							component: require('src/pages/components/Select2-demo.vue')
+						}
+					}
 				},
 				'/index1': {
 					component: Index1

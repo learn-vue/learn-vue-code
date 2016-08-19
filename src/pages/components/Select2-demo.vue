@@ -1,8 +1,7 @@
 <template>
 	<div class="dev-overview">
-		这里是首页  啦啦啦
+		select2select2select2select2select2select2
 	</div>
-	<h1>Hello App!</h1>
 </template>
 
 <script>

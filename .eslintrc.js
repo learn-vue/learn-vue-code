@@ -14,7 +14,7 @@ module.exports = {
 	'rules': {
 		'indent': ["error", "tab"],
 		'func-names':['error','never'],
-		'space-before-function-paren': ["error", "never"],
+		'space-before-function-paren': [0, "never"],
 		"space-before-blocks": [0, "always"],//不以新行开始的块{前面要不要有空格
 		// "semi": [2, "always"],//语句强制分号结尾
 		"semi": [0],//语句强制分号结尾
@@ -24,6 +24,7 @@ module.exports = {
 		'arrow-parens': 0,
 		// allow async-await
 		'generator-star-spacing': 0,
+		'no-useless-escape':0,
 		// allow debugger during development
 		'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
 		// "no-alert": 0,//禁止使用alert confirm prompt

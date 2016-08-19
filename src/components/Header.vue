@@ -29,8 +29,8 @@ export default {
 				text: '首页'
 			},
 			{
-				linkUrl: '/page/index1',
-				text: '111'
+				linkUrl: '/page/components',
+				text: 'components'
 			},
 			{
 				linkUrl: '/page/index2',
@@ -105,7 +105,6 @@ a,a:hover,a:visited{
 }
 #menu > .menu > li > a{
 	outline: none;
-	width:70px;
 	display: inline-block;
 	font-family: "Microsoft YaHei";
 	font-size:14px;
@@ -115,6 +114,7 @@ a,a:hover,a:visited{
 	margin: 0px 15px;
 	height: 50px;
 	line-height: 50px;
+	padding: 0 10px;
 }
 #menu > .menu >li> a:hover{
 	color:#428bca;
