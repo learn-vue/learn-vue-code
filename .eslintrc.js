@@ -26,7 +26,9 @@ module.exports = {
 		'generator-star-spacing': 0,
 		'no-useless-escape':0,
 		// allow debugger during development
-		'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+		'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+		"no-sequences": 0,//禁止使用逗号运算符
+		"eol-last": 0,//文件以单一的换行符结束
 		// "no-alert": 0,//禁止使用alert confirm prompt
 		// "no-array-constructor": 2,//禁止使用数组构造器
 		// "no-bitwise": 0,//禁止使用按位运算符
@@ -82,7 +84,7 @@ module.exports = {
 		// "no-native-reassign": 2,//不能重写native对象
 		// "no-negated-in-lhs": 2,//in 操作符的左边不能有!
 		// "no-nested-ternary": 0,//禁止使用嵌套的三目运算
-		// "no-new": 1,//禁止在使用new构造一个实例后不赋值
+		"no-new": 0,//禁止在使用new构造一个实例后不赋值
 		// "no-new-func": 1,//禁止使用new Function
 		// "no-new-object": 2,//禁止使用new Object()
 		// "no-new-require": 2,//禁止使用new require
@@ -148,7 +150,6 @@ module.exports = {
 		// "default-case": 2,//switch语句最后必须有default
 		// "dot-location": 0,//对象访问符的位置，换行的时候在行首还是行尾
 		// "dot-notation": [0, { "allowKeywords": true }],//避免不必要的方括号
-		// "eol-last": 0,//文件以单一的换行符结束
 		// "eqeqeq": 2,//必须使用全等
 		// "func-names": 0,//函数表达式必须有名字
 		// "func-style": [0, "declaration"],//函数风格，规定只能使用函数声明/函数表达式
@@ -170,7 +171,7 @@ module.exports = {
 		// "newline-after-var": 2,//变量声明后是否需要空一行
 		// "object-curly-spacing": [0, "never"],//大括号内是否允许不必要的空格
 		// "object-shorthand": 0,//强制对象字面量缩写语法
-		// "one-var": 1,//连续声明
+		"one-var": 0,//连续声明
 		// "operator-assignment": [0, "always"],//赋值运算符 += -=什么的
 		// "operator-linebreak": [2, "after"],//换行时运算符在行尾还是行首
 		// "padded-blocks": 0,//块语句内行首行尾是否要空行

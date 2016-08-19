@@ -17,6 +17,13 @@ module.exports = merge(baseWebpackConfig, {
   // eval-source-map is faster for development
   devtool: '#eval-source-map',
   plugins: [
+    // 全局依赖jQuery
+    new webpack.ProvidePlugin({
+      $ : "jquery",
+      jQuery : "jquery",
+      "window.jQuery" : "jquery"
+    }),
+    // 提取依赖的jQuery通用插件
     new webpack.DefinePlugin({
       'process.env': config.dev.env
     }),
