@@ -2,7 +2,6 @@ import Vue from 'vue';
 import $ from 'jquery';
 
 require('./select2.css');
-require('./jquery-1.11.2.min.js');
 require('./select2.min.js');
 require('./i18n/zh-CN.js');
 
