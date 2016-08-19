@@ -10,10 +10,15 @@ import Index6 from 'src/pages/test/Index6.vue';
 export default
 	{
 		'/': {
-			component: Index
-		},
-		'/index1': {
-			component: Index1
+			component: Layout,
+			subRoutes: {
+				'/': {
+					component: Index
+				},
+				'/index': {
+					component: Index
+				}
+			}
 		},
 		'/index2': {
 			component: Index2
@@ -33,6 +38,9 @@ export default
 		'/page': {
 			component: Layout,
 			subRoutes: {
+				'/': {
+					component: Index
+				},
 				'/index': {
 					component: Index
 				},

@@ -5,47 +5,59 @@
 		</div>	
 		<div id="menu" class="">
 			<ul class="menu clearfix">
-				<li class="customerPage">
-					<a v-link="{ path: '/page/index' }">首页</a>
+				<li v-for="(index,menu) in menuList">
+					<a class="nemu-item" v-link="{ path: menu.linkUrl }">{{ menu.text }}</a>
 				</li>
 				<li>
-					<a v-link="{ path: '/page/index1' }">111</a>
+					<a href="http://cn.vuejs.org/guide/installation.html" target="_blank">VUE</a>
 				</li>
 				<li>
-					<a v-link="{ path: '/page/index2' }">222</a>
-				</li>
-				<li>
-					<a v-link="{ path: '/page/index3' }">333</a>
-				</li>
-				<li>
-					<a v-link="{ path: '/page/index4' }">444</a>
-				</li>
-				<li>
-					<a v-link="{ path: '/page/index5' }">555</a>
-				</li>
-				<li>
-					<a v-link="{ path: '/page/index6' }">666</a>
+					<a href="http://router.vuejs.org/zh-cn/installation.html" target="_blank">VUE-router</a>
 				</li>
 			</ul>
 		</div>
 	</div>
-	
 </template>
 
 <script>
 export default {
 	data(){
 		return {
-			msg: '我是header'
+			msg: '我是header',
+			menuList: [{
+				linkUrl: '/index',
+				text: '首页'
+			},
+			{
+				linkUrl: '/page/index1',
+				text: '111'
+			},
+			{
+				linkUrl: '/page/index2',
+				text: '222'
+			},
+			{
+				linkUrl: '/page/index3',
+				text: '333'
+			},
+			{
+				linkUrl: '/page/index4',
+				text: '444'
+			},
+			{
+				linkUrl: '/page/index5',
+				text: '555'
+			},
+			{
+				linkUrl: '/page/index6',
+				text: '666'
+			}]
 		};
 	},
-	props: ['show'],
 	methods: {
 		load: function(){
-			console.info(this.show);
 		},
 		clickMe: function(){
-			this.$emit('child-tell-me-something', this.msg);
 		}
 	},
 	ready: function(){
@@ -87,6 +99,10 @@ a,a:hover,a:visited{
 #menu .menu li{
 	float:left;
 }
+.nemu-item.v-link-active{
+	border-bottom: 3px solid #428bca;
+    color: #428bca;
+}
 #menu > .menu > li > a{
 	outline: none;
 	width:70px;
@@ -102,7 +118,6 @@ a,a:hover,a:visited{
 }
 #menu > .menu >li> a:hover{
 	color:#428bca;
-	border-bottom: 3px solid #428bca; 
 }
 #menu .menu li a.active{
 	color:#428bca;
