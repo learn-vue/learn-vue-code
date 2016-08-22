@@ -52,6 +52,27 @@ export default
 						},
 						'/select2': {
 							component: require('src/pages/components/Select2-demo.vue')
+						},
+						'/tab': {
+							component: require('src/pages/components/Tab.vue')
+						},
+						'/datePicker': {
+							component: require('src/pages/components/DatePicker.vue')
+						},
+						'/mask': {
+							component: require('src/pages/components/Mask.vue')
+						},
+						'/modal': {
+							component: require('src/pages/components/Modal.vue')
+						},
+						'/pager': {
+							component: require('src/pages/components/Pager.vue')
+						},
+						'/table': {
+							component: require('src/pages/components/Table.vue')
+						},
+						'/validate': {
+							component: require('src/pages/components/Validate.vue')
 						}
 					}
 				},

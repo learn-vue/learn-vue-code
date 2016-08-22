@@ -29,7 +29,7 @@ export default {
 				text: '首页'
 			},
 			{
-				linkUrl: '/page/components',
+				linkUrl: '/page/components/select2',
 				text: 'components'
 			},
 			{

@@ -2,7 +2,7 @@
 	<div class="left-bar">
 		<ul class="menu clearfix">
 			<li v-for="(index,menu) in menuList">
-				<a class="nemu-item" v-link="{ path: menu.linkUrl }">{{ menu.text }}</a>
+				<a class="memu-item" v-link="{ path: menu.linkUrl }">{{ menu.text }}</a>
 			</li>
 		</ul>
 	</div>
@@ -20,35 +20,35 @@ export default {
 				text: 'select2'
 			},
 			{
-				linkUrl: '/page/components',
+				linkUrl: '/page/components/datePicker',
 				text: 'datePicker'
 			},
 			{
-				linkUrl: '/page/components',
+				linkUrl: '/page/components/mask',
 				text: 'mask'
 			},
 			{
-				linkUrl: '/page/components',
+				linkUrl: '/page/components/validate',
 				text: 'validate'
 			},
 			{
-				linkUrl: '/page/components',
+				linkUrl: '/page/components/tab',
 				text: 'tab'
 			},
 			{
-				linkUrl: '/page/components',
+				linkUrl: '/page/components/pager',
 				text: 'pager'
 			},
 			{
-				linkUrl: '/page/components',
+				linkUrl: '/page/components/table',
 				text: 'table'
 			},
 			{
-				linkUrl: '/page/components',
+				linkUrl: '/page/components/modal',
 				text: 'modal'
 			},
 			{
-				linkUrl: '/page/components',
+				linkUrl: '/page/components/modal',
 				text: 'top'
 			}]
 		};
@@ -81,5 +81,11 @@ export default {
 }
 .left-bar li:hover a{
 	color: #428bca;
+}
+.memu-item.v-link-active{
+	color: #428bca;
+}
+.memu-item{
+	color: #333;
 }
 </style>

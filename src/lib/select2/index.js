@@ -12,12 +12,13 @@ Vue.directive('select', {
 	bind: function () {
 		// 只调用一次，在指令第一次绑定到元素上时调用。
 		var self = this;
+		var params = self.params;
 
 		$(this.el).select2({
 			language: 'zh-CN',
-			width: '210px',
-			allowClear: this.params.allowclear ? this.params.allowclear === 'true' ? true : false : true,
-			placeholder: this.params.placeholder || '请选择'
+			width: params.width || '226px',
+			allowClear: params.allowclear ? params.allowclear === 'true' ? true : false : true,
+			placeholder: params.placeholder || '请选择'
 		}).on('change', function () {
 			self.set(this.value)
 		})
