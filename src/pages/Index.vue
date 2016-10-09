@@ -1,8 +1,5 @@
 <template>
-	<div class="dev-overview">
-		这里是首页  啦啦啦
-	</div>
-	<h1>Hello App!</h1>
+    <div class="logo">VUE</div>
 </template>
 
 <script>
@@ -16,6 +13,12 @@
     
 </script>
 
-<style>
-
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+.logo{
+    font-size: 150px;
+    margin-top: 15%;
+    margin-left: 40%;
+    color: #2db7f5;
+}
 </style>

@@ -65,7 +65,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .left-bar{
 	position: absolute;
 	width: 180px;
@@ -87,5 +87,8 @@ export default {
 }
 .memu-item{
 	color: #333;
+}
+h4{
+	margin: 20px auto;
 }
 </style>

@@ -2,10 +2,11 @@
 	<div class="header">
 		<div id="logo">
 			<img class="logo" src="../assets/logo.png">
-		</div>	
+			<span class="slogan">LEARN VUE</span>
+		</div>
 		<div id="menu" class="">
 			<ul class="menu clearfix">
-				<li v-for="(index,menu) in menuList">
+				<li data-dec="{{menu.dec}}" v-link="{ path: menu.linkUrl }" v-for="(index,menu) in menuList">
 					<a class="nemu-item" v-link="{ path: menu.linkUrl }">{{ menu.text }}</a>
 				</li>
 				<li>
@@ -26,23 +27,16 @@ export default {
 			msg: '我是header',
 			menuList: [{
 				linkUrl: '/index',
-				text: '首页'
+				text: '首页',
+				dec: 'index'
 			},
 			{
-				linkUrl: '/page/components/select2',
+				linkUrl: '/page/components',
 				text: 'components'
 			},
 			{
-				linkUrl: '/page/index2',
-				text: '222'
-			},
-			{
-				linkUrl: '/page/index3',
-				text: '333'
-			},
-			{
-				linkUrl: '/page/index4',
-				text: '444'
+				linkUrl: '/page/payment/mock',
+				text: 'mock'
 			},
 			{
 				linkUrl: '/page/index5',
@@ -68,59 +62,56 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-a,a:hover,a:visited{
-	text-decoration: none;
-}
-.header{
-	width:100%;
-	margin:auto;
-	font-size:14px;
-	padding: 10px 15px;
-	height: 73px;
-}
-#logo{
-	width:202px;
-	height:60px;
-	float:left;	
-}
-.logo {
-	width: 60px;
-	height: 60px
-}
-#menu{
-	margin-bottom:-10px; 
-	float: right;
-	margin-right: 50px;
-}
-.menu{
-	list-style:none;
-	padding-left:0px;
-}
-#menu .menu li{
-	float:left;
-}
-.nemu-item.v-link-active{
-	border-bottom: 3px solid #428bca;
-    color: #428bca;
-}
-#menu > .menu > li > a{
-	outline: none;
-	display: inline-block;
-	font-family: "Microsoft YaHei";
-	font-size:14px;
-	font-weight:500;
-	color:#777;
-	text-align: center;
-	margin: 0px 15px;
-	height: 50px;
-	line-height: 50px;
-	padding: 0 10px;
-}
-#menu > .menu >li> a:hover{
-	color:#428bca;
-}
-#menu .menu li a.active{
-	color:#428bca;
-	border-bottom: 3px solid #428bca;	
-}
+	.header {
+		height: 80px;
+		line-height: 80px;
+		border-bottom: solid #ebedee 1px;
+		position: relative;
+	}
+	#logo{
+		position: absolute;
+		left: 5%;
+		height: 80px;
+		line-height: 80px;
+	}
+	#logo img{
+		width: 30px;
+		height: 30px;
+		vertical-align: middle;
+		margin-right: 10px;
+		margin-bottom: 4px;
+	}
+	#logo .slogan{
+		font-size: 16px;
+		color: #2db7f5;
+	}
+	#menu{
+		position: absolute;
+		right: 50px;
+		height: 77px;
+		line-height: 77px;
+	}
+	#menu li{
+		float: left;
+		padding: 0 20px;
+		transition: all 0.3s ease 0s;
+		z-index: 3;
+		border-bottom: 3px solid transparent;
+	}
+	#menu li:hover{
+		border-bottom: 3px solid #2db7f5;
+	}
+	/*路由激活*/
+	#menu li.v-link-active{
+		border-bottom: 3px solid #2db7f5;
+	}
+	#menu li a{
+		color: #666;
+		font-size: 14px;
+	}
+	/*路由激活*/
+	#menu li a.v-link-active{
+		color: #2db7f5;
+		font-weight: 700;
+	}
 </style>

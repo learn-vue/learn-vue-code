@@ -99,7 +99,7 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 其他资源
 
 ```bash
-npm install vue-router  # 路由 http://router.vuejs.org/zh-cn/installation.html
+cnpm install vue-router  # 路由 http://router.vuejs.org/zh-cn/installation.html
 cnpm install vue-validator  #验证
 
 ```

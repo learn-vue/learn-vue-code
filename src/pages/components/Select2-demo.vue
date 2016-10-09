@@ -2,10 +2,17 @@
 	<h4>select2插件</h4>
 	<div class="demo">
 		<span class="span-label">select2插件：</span>
-		<select v-select="selected" width="300px" allowclear="false" placeholder="请选择一个选项">
+		<select v-select="selected1" width="300px" allowclear="false" placeholder="请选择一个选项">
 			<option v-for="o in options" :value="o.id">{{ o.text }}</option>
 		</select>
-		<span class="span-label">选中的值: <span class="text-primary">{{selected}}</span></span>
+		<span class="select-label">选中的值: <span class="text-primary">{{selected1}}</span></span>
+	</div>
+	<div class="demo">
+		<span class="span-label">select2允许清空：</span>
+		<select v-select="selected2" width="300px" allowclear="true" placeholder="请选择一个选项">
+			<option v-for="o in options" :value="o.id">{{ o.text }}</option>
+		</select>
+		<span class="select-label">选中的值: <span class="text-primary">{{selected2}}</span></span>
 	</div>
 </template>
 
@@ -15,7 +22,11 @@
 	module.exports = {
 		data: function(){
 			return {
-				selected: '',
+				selected1: '',
+				selected2: '',
+				selected3: '',
+				selected4: '',
+				selected5: '',
 				options: [
 				{ id: 'hello', text: 'hello' },
 				{ id: 'what', text: 'what' },
@@ -35,16 +46,22 @@
 </script>
 
 <style scoped>
+.demo{
+	margin-bottom: 10px;
+}
 select {
   min-width: 300px;
-}
-h4{
-	margin: 20px auto;
 }
 .text-primary{
 	color: #428bca;
 }
 .span-label{
 	margin: 0 10px 0 20px;
+	width: 100px;
+	text-align: right;
+	display: inline-block;
+}
+.select-label{
+	margin-left: 20px;
 }
 </style>

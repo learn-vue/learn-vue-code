@@ -11,7 +11,9 @@ import App from '../App';
 // 创建一个路由器实例
 // 创建实例时可以传入配置参数进行定制，为保持简单，这里使用默认配置
 Vue.use(Router);
-var router = new Router()
+var router = new Router({
+	hashbang: false
+})
 // 定义路由规则
 // 每条路由规则应该映射到一个组件。这里的“组件”可以是一个使用 Vue.extend
 // 创建的组件构造函数，也可以是一个组件选项对象。
