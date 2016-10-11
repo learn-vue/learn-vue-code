@@ -106,4 +106,9 @@ cnpm install vue-validator  #验证
 
 ```
 vue UI   http://hackersome.com/p/bravf/VueUI
+
+
 ```
+
+[requireJs入门教程 (Click Me)](http://www.runoob.com/w3cnote/requirejs-tutorial-1.html)
+[代码高亮工具 (Click Me)](https://highlightjs.org/usage/)

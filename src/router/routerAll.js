@@ -79,6 +79,9 @@ export default
 				'/payment/mock': {
 					component: require('src/pages/components/Select2-demo.vue')
 				},
+				'/payment/test': {
+					component: require('src/pages/test.vue')
+				},
 				'/index1': {
 					component: Index1
 				},

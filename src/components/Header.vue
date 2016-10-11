@@ -13,7 +13,13 @@
 					<a href="http://cn.vuejs.org/guide/installation.html" target="_blank">VUE</a>
 				</li>
 				<li>
+					<a href="http://vuefe.cn/guide/" target="_blank">VUE 2.0</a>
+				</li>
+				<li>
 					<a href="http://router.vuejs.org/zh-cn/installation.html" target="_blank">VUE-router</a>
+				</li>
+				<li>
+					<a href="https://github.com/vuejs/vue-resource" target="_blank">VUE-resource</a>
 				</li>
 			</ul>
 		</div>
@@ -39,12 +45,8 @@ export default {
 				text: 'mock'
 			},
 			{
-				linkUrl: '/page/index5',
-				text: '555'
-			},
-			{
-				linkUrl: '/page/index6',
-				text: '666'
+				linkUrl: '/page/payment/test',
+				text: '实验基地'
 			}]
 		};
 	},

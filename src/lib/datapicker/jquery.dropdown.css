@@ -1,0 +1,1327 @@
+.combo-container {
+	box-sizing: border-box;
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+}
+
+.combo-container .combo-selection--single {
+	box-sizing: border-box;
+	cursor: pointer;
+	display: block;
+	height: 31px;
+	user-select: none;
+	-webkit-user-select: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.combo-container .combo-selection--single .combo-selection__rendered {
+	display: block;
+	overflow: hidden;
+	padding-left: 8px;
+	padding-right: 20px;
+	text-overflow: ellipsis;
+}
+
+.combo-container[dir="rtl"] .combo-selection--single .combo-selection__rendered
+	{
+	padding-right: 8px;
+	padding-left: 20px;
+}
+
+.combo-container .combo-selection--multiple {
+	box-sizing: border-box;
+	cursor: pointer;
+	display: block;
+	min-height: 32px;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.combo-container .combo-selection--multiple .combo-selection__rendered {
+	display: inline-block;
+	overflow: hidden;
+	padding-left: 8px;
+	text-overflow: ellipsis;
+}
+
+.combo-container .combo-search--inline {
+	float: left;
+}
+
+.combo-container .combo-search--inline .combo-search__field {
+	border: none;
+	font-size: 100%;
+	margin-top: 5px;
+}
+
+.combo-dropdown {
+	background-color: white;
+	border: 1px solid #aaa;
+	border-radius: 4px;
+	box-sizing: border-box;
+	display: block;
+	position: absolute;
+	left: -100000px;
+	width: 100%;
+	z-index: 100;
+}
+
+.combo-results {
+	display: block;
+}
+
+.combo-results__options {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.combo-results__option {
+	padding: 6px;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.combo-results__option[aria-selected] {
+	cursor: pointer;
+}
+
+.combo-container--open .combo-dropdown {
+	left: 0;
+}
+
+.combo-container--open .combo-dropdown--above {
+	border-bottom: none;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.combo-container--open .combo-dropdown--below {
+	border-top: none;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.combo-search--dropdown {
+	display: block;
+	padding: 4px;
+}
+
+.combo-search--dropdown .combo-search__field {
+	padding: 4px;
+	width: 100%;
+}
+
+.combo-search--dropdown.combo-search--hide {
+	display: none;
+}
+
+.combo-close-mask {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	display: block;
+	position: fixed;
+	left: 0;
+	top: 0;
+	min-height: 100%;
+	min-width: 100%;
+	height: auto;
+	width: auto;
+	opacity: 0;
+	z-index: 99;
+	background-color: #fff;
+	filter: alpha(opacity = 0);
+}
+
+.combo-container--default .combo-selection--single {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.combo-container--default .combo-selection--single .combo-selection__rendered
+	{
+	color: #444;
+	line-height: 28px;
+}
+
+.combo-container--default .combo-selection--single .combo-selection__clear
+	{
+	cursor: pointer;
+	float: right;
+	font-weight: bold;
+}
+
+.combo-container--default .combo-selection--single .combo-selection__placeholder
+	{
+	color: #999;
+}
+
+.combo-container--default .combo-selection--single .combo-selection__arrow
+	{
+	height: 28px;
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	width: 20px;
+}
+
+.combo-container--default .combo-selection--single .combo-selection__arrow b
+	{
+	border-color: #333 transparent transparent transparent;
+	border-style: solid;
+	border-width: 5px 4px 0 4px;
+	height: 0;
+	left: 50%;
+	margin-left: -4px;
+	margin-top: -2px;
+	position: absolute;
+	top: 50%;
+	width: 0;
+}
+
+.combo-container--default[dir="rtl"] .combo-selection--single .combo-selection__clear
+	{
+	float: left;
+}
+
+.combo-container--default[dir="rtl"] .combo-selection--single .combo-selection__arrow
+	{
+	left: 1px;
+	right: auto;
+}
+
+.combo-container--default.combo-container--disabled .combo-selection--single
+	{
+	background-color: #eee;
+	cursor: default;
+}
+
+.combo-container--default.combo-container--disabled .combo-selection--single .combo-selection__clear
+	{
+	display: none;
+}
+
+.combo-container--default.combo-container--open .combo-selection--single .combo-selection__arrow b
+	{
+	border-color: transparent transparent #333 transparent;
+	border-width: 0 4px 5px 4px;
+}
+
+.combo-container--default .combo-selection--multiple {
+	background-color: white;
+	border: 1px solid #aaa;
+	border-radius: 4px;
+	cursor: text;
+}
+
+.combo-container--default .combo-selection--multiple .combo-selection__rendered
+	{
+	list-style: none;
+	margin: 0;
+	padding: 0 5px;
+	width: 100%;
+}
+
+.combo-container--default .combo-selection--multiple .combo-selection__placeholder
+	{
+	color: #999;
+	margin-top: 5px;
+	float: left;
+}
+
+.combo-container--default .combo-selection--multiple .combo-selection__clear
+	{
+	cursor: pointer;
+	float: right;
+	font-weight: bold;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+
+.combo-container--default .combo-selection--multiple .combo-selection__choice
+	{
+	background-color: #e4e4e4;
+	border: 1px solid #aaa;
+	border-radius: 4px;
+	cursor: default;
+	float: left;
+	margin-right: 5px;
+	margin-top: 5px;
+	padding: 0 5px;
+}
+
+.combo-container--default .combo-selection--multiple .combo-selection__choice__remove
+	{
+	color: #999;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: bold;
+	margin-right: 2px;
+}
+
+.combo-container--default .combo-selection--multiple .combo-selection__choice__remove:hover
+	{
+	color: #333;
+}
+
+.combo-container--default[dir="rtl"] .combo-selection--multiple .combo-selection__choice,
+	.combo-container--default[dir="rtl"] .combo-selection--multiple .combo-selection__placeholder
+	{
+	float: right;
+}
+
+.combo-container--default[dir="rtl"] .combo-selection--multiple .combo-selection__choice
+	{
+	margin-left: 5px;
+	margin-right: auto;
+}
+
+.combo-container--default[dir="rtl"] .combo-selection--multiple .combo-selection__choice__remove
+	{
+	margin-left: 2px;
+	margin-right: auto;
+}
+
+.combo-container--default.combo-container--disabled .combo-selection--multiple
+	{
+	background-color: #eee;
+	cursor: default;
+}
+
+.combo-container--default.combo-container--disabled .combo-selection__choice__remove
+	{
+	display: none;
+}
+
+.combo-container--default.combo-container--open.combo-container--above .combo-selection--single,
+	.combo-container--default.combo-container--open.combo-container--above .combo-selection--multiple
+	{
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.combo-container--default.combo-container--open.combo-container--below .combo-selection--single,
+	.combo-container--default.combo-container--open.combo-container--below .combo-selection--multiple
+	{
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.combo-container--default .combo-search--dropdown .combo-search__field {
+	border: 1px solid #aaa;
+}
+
+.combo-container--default .combo-search--inline .combo-search__field {
+	background: transparent;
+	border: none;
+	outline: 0;
+}
+
+.combo-container--default .combo-results>.combo-results__options {
+	max-height: 200px;
+	overflow-y: auto;
+}
+
+.combo-container--default .combo-results__option[role=group] {
+	padding: 0;
+}
+
+.combo-container--default .combo-results__option[aria-disabled=true] {
+	color: #999;
+}
+
+.combo-container--default .combo-results__option[aria-selected=true] {
+	background-color: #ddd;
+}
+
+.combo-container--default .combo-results__option .combo-results__option
+	{
+	padding-left: 1em;
+}
+
+.combo-container--default .combo-results__option .combo-results__option .combo-results__group
+	{
+	padding-left: 0;
+}
+
+.combo-container--default .combo-results__option .combo-results__option .combo-results__option
+	{
+	margin-left: -1em;
+	padding-left: 2em;
+}
+
+.combo-container--default .combo-results__option .combo-results__option .combo-results__option .combo-results__option
+	{
+	margin-left: -2em;
+	padding-left: 3em;
+}
+
+.combo-container--default .combo-results__option .combo-results__option .combo-results__option .combo-results__option .combo-results__option
+	{
+	margin-left: -3em;
+	padding-left: 4em;
+}
+
+.combo-container--default .combo-results__option .combo-results__option .combo-results__option .combo-results__option .combo-results__option .combo-results__option
+	{
+	margin-left: -4em;
+	padding-left: 5em;
+}
+
+.combo-container--default .combo-results__option .combo-results__option .combo-results__option .combo-results__option .combo-results__option .combo-results__option .combo-results__option
+	{
+	margin-left: -5em;
+	padding-left: 6em;
+}
+
+.combo-container--default .combo-results__option--highlighted[aria-selected]
+	{
+	background-color: #5897fb;
+	color: white;
+}
+
+.combo-container--default .combo-results__group {
+	cursor: default;
+	display: block;
+	padding: 6px;
+}
+
+.combo-container--classic .combo-selection--single {
+	background-color: #f6f6f6;
+	border: 1px solid #aaa;
+	border-radius: 4px;
+	outline: 0;
+	background-image: -webkit-linear-gradient(top, #ffffff 50%, #eeeeee 100%);
+	background-image: -o-linear-gradient(top, #ffffff 50%, #eeeeee 100%);
+	background-image: linear-gradient(to bottom, #ffffff 50%, #eeeeee 100%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',
+		endColorstr='#eeeeee', GradientType=0);
+}
+
+.combo-container--classic .combo-selection--single:focus {
+	border: 1px solid #5897fb;
+}
+
+.combo-container--classic .combo-selection--single .combo-selection__rendered
+	{
+	color: #444;
+	line-height: 28px;
+}
+
+.combo-container--classic .combo-selection--single .combo-selection__clear
+	{
+	cursor: pointer;
+	float: right;
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+.combo-container--classic .combo-selection--single .combo-selection__placeholder
+	{
+	color: #999;
+}
+
+.combo-container--classic .combo-selection--single .combo-selection__arrow
+	{
+	background-color: #ddd;
+	border: none;
+	border-left: 1px solid #aaa;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	height: 26px;
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	width: 20px;
+	background-image: -webkit-linear-gradient(top, #eeeeee 50%, #cccccc 100%);
+	background-image: -o-linear-gradient(top, #eeeeee 50%, #cccccc 100%);
+	background-image: linear-gradient(to bottom, #eeeeee 50%, #cccccc 100%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee',
+		endColorstr='#cccccc', GradientType=0);
+}
+
+.combo-container--classic .combo-selection--single .combo-selection__arrow b
+	{
+	border-color: #888 transparent transparent transparent;
+	border-style: solid;
+	border-width: 5px 4px 0 4px;
+	height: 0;
+	left: 50%;
+	margin-left: -4px;
+	margin-top: -2px;
+	position: absolute;
+	top: 50%;
+	width: 0;
+}
+
+.combo-container--classic[dir="rtl"] .combo-selection--single .combo-selection__clear
+	{
+	float: left;
+}
+
+.combo-container--classic[dir="rtl"] .combo-selection--single .combo-selection__arrow
+	{
+	border: none;
+	border-right: 1px solid #aaa;
+	border-radius: 0;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	left: 1px;
+	right: auto;
+}
+
+.combo-container--classic.combo-container--open .combo-selection--single
+	{
+	border: 1px solid #5897fb;
+}
+
+.combo-container--classic.combo-container--open .combo-selection--single .combo-selection__arrow
+	{
+	background: transparent;
+	border: none;
+}
+
+.combo-container--classic.combo-container--open .combo-selection--single .combo-selection__arrow b
+	{
+	border-color: transparent transparent #888 transparent;
+	border-width: 0 4px 5px 4px;
+}
+
+.combo-container--classic.combo-container--open.combo-container--above .combo-selection--single
+	{
+	border-top: none;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	background-image: -webkit-linear-gradient(top, #ffffff 0%, #eeeeee 50%);
+	background-image: -o-linear-gradient(top, #ffffff 0%, #eeeeee 50%);
+	background-image: linear-gradient(to bottom, #ffffff 0%, #eeeeee 50%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',
+		endColorstr='#eeeeee', GradientType=0);
+}
+
+.combo-container--classic.combo-container--open.combo-container--below .combo-selection--single
+	{
+	border-bottom: none;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	background-image: -webkit-linear-gradient(top, #eeeeee 50%, #ffffff 100%);
+	background-image: -o-linear-gradient(top, #eeeeee 50%, #ffffff 100%);
+	background-image: linear-gradient(to bottom, #eeeeee 50%, #ffffff 100%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee',
+		endColorstr='#ffffff', GradientType=0);
+}
+
+.combo-container--classic .combo-selection--multiple {
+	background-color: white;
+	border: 1px solid #aaa;
+	border-radius: 4px;
+	cursor: text;
+	outline: 0;
+}
+
+.combo-container--classic .combo-selection--multiple:focus {
+	border: 1px solid #5897fb;
+}
+
+.combo-container--classic .combo-selection--multiple .combo-selection__rendered
+	{
+	list-style: none;
+	margin: 0;
+	padding: 0 5px;
+}
+
+.combo-container--classic .combo-selection--multiple .combo-selection__clear
+	{
+	display: none;
+}
+
+.combo-container--classic .combo-selection--multiple .combo-selection__choice
+	{
+	background-color: #e4e4e4;
+	border: 1px solid #aaa;
+	border-radius: 4px;
+	cursor: default;
+	float: left;
+	margin-right: 5px;
+	margin-top: 5px;
+	padding: 0 5px;
+}
+
+.combo-container--classic .combo-selection--multiple .combo-selection__choice__remove
+	{
+	color: #888;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: bold;
+	margin-right: 2px;
+}
+
+.combo-container--classic .combo-selection--multiple .combo-selection__choice__remove:hover
+	{
+	color: #555;
+}
+
+.combo-container--classic[dir="rtl"] .combo-selection--multiple .combo-selection__choice
+	{
+	float: right;
+}
+
+.combo-container--classic[dir="rtl"] .combo-selection--multiple .combo-selection__choice
+	{
+	margin-left: 5px;
+	margin-right: auto;
+}
+
+.combo-container--classic[dir="rtl"] .combo-selection--multiple .combo-selection__choice__remove
+	{
+	margin-left: 2px;
+	margin-right: auto;
+}
+
+.combo-container--classic.combo-container--open .combo-selection--multiple
+	{
+	border: 1px solid #5897fb;
+}
+
+.combo-container--classic.combo-container--open.combo-container--above .combo-selection--multiple
+	{
+	border-top: none;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.combo-container--classic.combo-container--open.combo-container--below .combo-selection--multiple
+	{
+	border-bottom: none;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.combo-container--classic .combo-search--dropdown .combo-search__field {
+	border: 1px solid #aaa;
+	outline: 0;
+}
+
+.combo-container--classic .combo-search--inline .combo-search__field {
+	outline: 0;
+}
+
+.combo-container--classic .combo-dropdown {
+	background-color: white;
+	border: 1px solid transparent;
+}
+
+.combo-container--classic .combo-dropdown--above {
+	border-bottom: none;
+}
+
+.combo-container--classic .combo-dropdown--below {
+	border-top: none;
+}
+
+.combo-container--classic .combo-results>.combo-results__options {
+	max-height: 200px;
+	overflow-y: auto;
+}
+
+.combo-container--classic .combo-results__option[role=group] {
+	padding: 0;
+}
+
+.combo-container--classic .combo-results__option[aria-disabled=true] {
+	color: grey;
+}
+
+.combo-container--classic .combo-results__option--highlighted[aria-selected]
+	{
+	background-color: #3875d7;
+	color: white;
+}
+
+.combo-container--classic .combo-results__group {
+	cursor: default;
+	display: block;
+	padding: 6px;
+}
+
+.combo-container--classic.combo-container--open .combo-dropdown {
+	border-color: #5897fb;
+}
+
+
+.combo .combo-selection--single .combo-selection__clear
+	{
+	margin-right:12px;
+}
+
+.combo .combo-selection--single .combo-selection__arrow{
+	border-left:1px solid #ccc;
+	width:25px;
+}
+
+.dd-panel {
+	display: none;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	z-index: 1052;
+}
+
+.dd-panel .dd-empty, .dd-panel .dd-loading {
+	padding: 0 0 8px 8px
+}
+
+.dd-head .input-group {
+	width: 96%;
+	margin: 10px 2%;
+	position: relative;
+}
+
+.dd-head .input-group:before {
+	float: left;
+	position: absolute;
+	top: 10px;
+	left: 8px;
+	width: 15px;
+	height: 16px;
+	content: "";
+	background: url("/assets/images/webchat/im-icons.png") no-repeat -200px
+		-178px;
+}
+
+.dd-head .input-group-search .form-control {
+	padding-left: 28px;
+}
+
+.dd-head .placeholder {
+	position: absolute;
+	left: 30px;
+	top: 7px;
+	color: #777;
+	font-weight: normal;
+}
+
+.dd-panel dl {
+	margin: 0 6px 6px;
+}
+
+.dd-panel dt {
+	float: left;
+	padding: 2px 5px;
+	color: #d6d6d6;
+}
+
+.dd-panel dd {
+	margin: 0 5px 0 40px;
+}
+
+.dd-panel ul {
+	list-style: none;
+	padding: 0;
+	margin-bottom: 0px;
+}
+
+.dd-panel .dd-all-cities {
+	margin-bottom: 10px;
+}
+
+.dd-panel .cities {
+	border-radius: 4px;
+	border: 1px solid #C6C6C6;
+	padding: 5px 8px;
+	margin-top: 9px;
+}
+
+.dd-panel .city {
+	float: left;
+	padding: 2px 3px;
+	margin: 5px 7px 0 0;
+	cursor: pointer;
+	color: #428cca;
+}
+
+.dd-panel .city-active {
+	color: white;
+	background-color: #428cca;
+}
+
+.dd-panel .province {
+	float: left;
+	padding: 2px 3px;
+	margin-right: 5px;
+	cursor: pointer;
+	color: #464745;
+	position: relative;
+}
+
+.dd-panel .province-active {
+	background-color: #777777;
+	color: white;
+	border-radius: 2px;
+}
+
+.dd-panel .province-active:before {
+	border-bottom: 7px solid rgba(0, 0, 0, 0.2);
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	content: "";
+	display: inline-block;
+	position: absolute;
+	left: 17px;
+	bottom: -9px;
+}
+
+.dd-panel .province-active:after {
+	border-bottom: 6px solid #fff;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	content: "";
+	display: inline-block;
+	position: absolute;
+	left: 18px;
+	bottom: -10px;
+	z-index: 9999;
+}
+
+.dd-item {
+	cursor: pointer;
+	padding: 6px;
+}
+
+.dd-item-selected {
+	background-color: #ddd;
+}
+
+.dd-item-active {
+	background-color: #5897fb;
+	color: white;
+}
+
+/******************************银行账号样式***********************************/
+.bankno-shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 1.4em;
+	border: 1px solid #EEEEAE;
+	padding: 8px 12px;
+	text-indent: -6px;
+	color: #70706B;
+	z-index: 1052;
+	background: #FFFFCC;
+	border-radius: 4px;
+	display: none;
+}
+
+/*!
+ * Stylesheet for the Date Range Picker, for use with Bootstrap 3.x
+ *
+ * Copyright 2013 Dan Grossman ( http://www.dangrossman.info )
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Built for http://www.improvely.com
+ */
+.daterangepicker.dropdown-menu {
+	max-width: none;
+	z-index: 3000;
+}
+
+.daterangepicker.opensleft .ranges, .daterangepicker.opensleft .calendar
+	{
+	float: left;
+	margin: 4px;
+}
+
+.daterangepicker.opensright .ranges, .daterangepicker.opensright .calendar,
+	.daterangepicker.openscenter .ranges, .daterangepicker.openscenter .calendar
+	{
+	float: right;
+	margin: 4px;
+}
+
+.daterangepicker.single .ranges, .daterangepicker.single .calendar {
+	float: none;
+}
+
+.daterangepicker .ranges {
+	width: 160px;
+	text-align: left;
+}
+
+.daterangepicker .ranges .range_inputs>div {
+	float: left;
+}
+
+.daterangepicker .ranges .range_inputs>div:nth-child(2) {
+	padding-left: 11px;
+}
+
+.daterangepicker .calendar {
+	display: none;
+	max-width: 270px;
+}
+
+.daterangepicker.show-calendar .calendar {
+	display: block;
+}
+
+.daterangepicker .calendar.single .calendar-date {
+	border: none;
+}
+
+.daterangepicker .calendar th, .daterangepicker .calendar td {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	white-space: nowrap;
+	text-align: center;
+	min-width: 32px;
+}
+
+.daterangepicker .daterangepicker_start_input label, .daterangepicker .daterangepicker_end_input label
+	{
+	color: #333;
+	display: block;
+	font-size: 11px;
+	font-weight: normal;
+	height: 20px;
+	line-height: 20px;
+	margin-bottom: 2px;
+	text-shadow: #fff 1px 1px 0px;
+	text-transform: uppercase;
+	width: 74px;
+}
+
+.daterangepicker .ranges input {
+	font-size: 11px;
+}
+
+.daterangepicker .ranges .input-mini {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	color: #555;
+	display: block;
+	font-size: 11px;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	margin: 0 0 10px 0;
+	padding: 0 6px;
+	width: 74px;
+}
+
+.daterangepicker .ranges ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.daterangepicker .ranges li {
+	font-size: 13px;
+	background: #f5f5f5;
+	border: 1px solid #f5f5f5;
+	color: #08c;
+	padding: 3px 12px;
+	margin-bottom: 8px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.daterangepicker .ranges li.active, .daterangepicker .ranges li:hover {
+	background: #08c;
+	border: 1px solid #08c;
+	color: #fff;
+}
+
+.daterangepicker .calendar-date {
+	border: 1px solid #ddd;
+	padding: 4px;
+	border-radius: 4px;
+	background: #fff;
+}
+
+.daterangepicker .calendar-time {
+	text-align: center;
+	margin: 8px auto 0 auto;
+	line-height: 30px;
+}
+
+.daterangepicker {
+	position: absolute;
+	background: #fff;
+	top: 100px;
+	left: 20px;
+	padding: 4px;
+	margin-top: 1px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.daterangepicker.opensleft:before {
+	position: absolute;
+	top: -7px;
+	right: 9px;
+	display: inline-block;
+	border-right: 7px solid transparent;
+	border-bottom: 7px solid #ccc;
+	border-left: 7px solid transparent;
+	border-bottom-color: rgba(0, 0, 0, 0.2);
+	content: '';
+}
+
+.daterangepicker.opensleft:after {
+	position: absolute;
+	top: -6px;
+	right: 10px;
+	display: inline-block;
+	border-right: 6px solid transparent;
+	border-bottom: 6px solid #fff;
+	border-left: 6px solid transparent;
+	content: '';
+}
+
+.daterangepicker.openscenter:before {
+	position: absolute;
+	top: -7px;
+	left: 0;
+	right: 0;
+	width: 0;
+	margin-left: auto;
+	margin-right: auto;
+	display: inline-block;
+	border-right: 7px solid transparent;
+	border-bottom: 7px solid #ccc;
+	border-left: 7px solid transparent;
+	border-bottom-color: rgba(0, 0, 0, 0.2);
+	content: '';
+}
+
+.daterangepicker.openscenter:after {
+	position: absolute;
+	top: -6px;
+	left: 0;
+	right: 0;
+	width: 0;
+	margin-left: auto;
+	margin-right: auto;
+	display: inline-block;
+	border-right: 6px solid transparent;
+	border-bottom: 6px solid #fff;
+	border-left: 6px solid transparent;
+	content: '';
+}
+
+.daterangepicker.opensright:before {
+	position: absolute;
+	top: -7px;
+	left: 9px;
+	display: inline-block;
+	border-right: 7px solid transparent;
+	border-bottom: 7px solid #ccc;
+	border-left: 7px solid transparent;
+	border-bottom-color: rgba(0, 0, 0, 0.2);
+	content: '';
+}
+
+.daterangepicker.opensright:after {
+	position: absolute;
+	top: -6px;
+	left: 10px;
+	display: inline-block;
+	border-right: 6px solid transparent;
+	border-bottom: 6px solid #fff;
+	border-left: 6px solid transparent;
+	content: '';
+}
+
+.daterangepicker table {
+	width: 100%;
+	margin: 0;
+}
+
+.daterangepicker td, .daterangepicker th {
+	text-align: center;
+	width: 20px;
+	height: 20px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.daterangepicker td.off {
+	color: #999;
+}
+
+.daterangepicker td.disabled, .daterangepicker option.disabled {
+	color: #999;
+}
+
+.daterangepicker td.available:hover, .daterangepicker th.available:hover
+	{
+	background: #eee;
+}
+
+.daterangepicker td.in-range {
+	background: #ebf4f8;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+.daterangepicker td.start-date {
+	-webkit-border-radius: 4px 0 0 4px;
+	-moz-border-radius: 4px 0 0 4px;
+	border-radius: 4px 0 0 4px;
+}
+
+.daterangepicker td.end-date {
+	-webkit-border-radius: 0 4px 4px 0;
+	-moz-border-radius: 0 4px 4px 0;
+	border-radius: 0 4px 4px 0;
+}
+
+.daterangepicker td.start-date.end-date {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.daterangepicker td.active, .daterangepicker td.active:hover {
+	background-color: #357ebd;
+	border-color: #3071a9;
+	color: #fff;
+	border-radius: 4px !important;
+}
+
+.daterangepicker td.week, .daterangepicker th.week {
+	font-size: 80%;
+	color: #ccc;
+}
+
+.daterangepicker select.monthselect, .daterangepicker select.yearselect
+	{
+	font-size: 12px;
+	padding: 1px;
+	height: auto;
+	margin: 0;
+	cursor: default;
+}
+
+.daterangepicker select.monthselect {
+	margin-right: 2%;
+	width: 56%;
+}
+
+.daterangepicker select.yearselect {
+	width: 40%;
+}
+
+.daterangepicker select.hourselect, .daterangepicker select.minuteselect,
+	.daterangepicker select.secondselect, .daterangepicker select.ampmselect
+	{
+	width: 50px;
+	margin-bottom: 0;
+}
+
+.daterangepicker_start_input {
+	float: left;
+}
+
+.daterangepicker_end_input {
+	float: left;
+	padding-left: 11px
+}
+
+.daterangepicker th.month {
+	width: auto;
+}
+
+/*****************************************************************************/
+/*****************************************************************************/
+/*****************************************************************************/
+/*****************************************************************************/
+/*****************************************************************************/
+/*****************************************************************************/
+.dd-panel.daterangepicker {
+	padding: 0;
+	width: 280px;
+	font-size: 12px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.dd-panel.daterangepicker .dd-container {
+	padding: 4px;
+}
+
+.dd-panel.daterangepicker .calendar-date {
+	border: none 0;
+	padding: 0;
+}
+
+.dd-panel.daterangepicker .dd-head {
+	padding-bottom: 4px;
+}
+
+.dd-panel.daterangepicker .row-week th {
+	cursor: default;
+}
+
+.dd-panel.daterangepicker .cell-week {
+	font-weight: bold;
+}
+
+.dd-panel.daterangepicker .dd-head .form-control {
+	cursor: default;
+	padding: 3px 5px;
+	height: 30px;
+	width: 33%;
+	text-align: center;
+	font-size: 12px;
+}
+
+.dd-panel.daterangepicker .dr-date-input {
+	margin: 0 10px;
+}
+
+.dd-panel.daterangepicker .dr-date-input .spliter {
+	width: 8%;
+	padding-top: 4px;
+	text-align: center;
+}
+
+.dd-panel.daterangepicker .dd-dr-btns button {
+	float: left;
+	margin: 3px 10px;
+	outline: none;
+	width: 67px;
+}
+
+.dd-panel.daterangepicker .dr-label-range {
+	border-top: 1px solid #ccc;
+	margin: 5px 0;
+	padding: 5px 0 5px 15px;
+}
+
+.dd-panel.daterangepicker .glyphicon {
+	padding: 2px 0 3px;
+}
+
+.dd-panel.daterangepicker .glyphicon-arrow-left {
+	margin-left: 10px;
+}
+
+.dd-panel.daterangepicker .glyphicon-arrow-right {
+	margin-right: 10px;
+}
+
+.dd-panel.daterangepicker .dr-nav {
+	margin: 5px 0;
+}
+
+.dd-panel.daterangepicker .dr-nav span {
+	cursor: pointer;
+}
+
+.dd-panel.daterangepicker .dr-nav .caret {
+	cursor: pointer;
+	margin-left: 5px;
+	border-top-color: #66afe9;
+}
+
+.dd-panel.daterangepicker .dr-date-year {
+	width: 24%;
+	text-align: center;
+	margin-right: 16%;
+	color: #69A1D5;
+	font-size: 14px;
+}
+
+.dd-panel.daterangepicker .dr-date-month {
+	width: 27%;
+	text-align: center;
+	margin-left: 14%;
+	color: #69A1D5;
+	font-size: 14px;
+}
+
+.dd-panel.daterangepicker td{
+	padding:8px;
+}
+
+.dd-panel.daterangepicker td.current {
+	color: red;
+}
+
+.dd-panel.daterangepicker td.disabled {
+	cursor: default;
+}
+
+.dd-panel.daterangepicker .dr-date-focus {
+	border-color: #66afe9;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px
+		rgba(102, 175, 233, 0.6);
+	outline: 0 none;
+}
+
+/***弹出层***/
+.dd-panel.daterangepicker .dr-pop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #EEEEEE;
+	border: 1px solid #D9D9D9;
+	border-radius: 3px;
+}
+
+.dd-panel.daterangepicker .dr-pop-year {
+	left: 52%;
+	top: 4%;
+}
+
+.dd-panel.daterangepicker .dr-pop-month {
+	left: 24%;
+	top: 9%;
+}
+
+.dd-panel.daterangepicker .dr-pop-delta {
+	text-align: center;
+}
+
+.dd-panel.daterangepicker .dr-pop-delta .caret {
+	border-width: 6px;
+	cursor: pointer;
+}
+
+.dd-panel.daterangepicker .dr-pop-delta .caret-up {
+	border-top: none 0;
+	border-bottom-style: solid;
+}
+
+.dd-panel.daterangepicker .dr-pop li {
+	padding: 3px 10px;
+	cursor: pointer;
+}
+
+.dd-panel.daterangepicker .dr-pop .hover {
+	background: #D9D9D9;
+}
+
+.dd-panel.daterangepicker .dr-pop .active {
+	color: #69a1d5;
+}
