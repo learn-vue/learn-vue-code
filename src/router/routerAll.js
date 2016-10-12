@@ -76,10 +76,10 @@ export default
 						}
 					}
 				},
-				'/payment/mock': {
-					component: require('src/pages/components/Select2-demo.vue')
+				'/article': {
+					component: require('src/pages/article/index.vue')
 				},
-				'/payment/test': {
+				'/test': {
 					component: require('src/pages/test.vue')
 				},
 				'/index1': {

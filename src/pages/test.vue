@@ -4,7 +4,7 @@
 </div>
 
 <ul>
-  <todo v-for="todo in todos" v-bind:todo="todo"></todo>
+	<todo v-for="todo in todos" v-bind:todo="todo"></todo>
 </ul>
 
 </template>

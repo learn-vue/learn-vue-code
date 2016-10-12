@@ -41,11 +41,11 @@ export default {
 				text: 'components'
 			},
 			{
-				linkUrl: '/page/payment/mock',
-				text: 'mock'
+				linkUrl: '/page/article',
+				text: '资料'
 			},
 			{
-				linkUrl: '/page/payment/test',
+				linkUrl: '/page/test',
 				text: '实验基地'
 			}]
 		};
