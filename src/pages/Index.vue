@@ -22,3 +22,8 @@
     color: #2db7f5;
 }
 </style>
+<style>
+    #nemu li[data-dec="index"]{
+        border-bottom: 3px solid #2db7f5;
+    }
+</style>

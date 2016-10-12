@@ -1,7 +1,7 @@
 <template>
 	<div class="left-bar">
 		<ul class="menu clearfix">
-			<li v-for="(index,menu) in menuList">
+			<li v-for="(index,menu) in menuList" v-link="{ path: menu.linkUrl }">
 				<a class="memu-item" v-link="{ path: menu.linkUrl }">{{ menu.text }}</a>
 			</li>
 		</ul>
@@ -78,12 +78,22 @@ export default {
 }
 .left-bar li{
 	padding: 10px 0;
+	font-size: 14px;
+	position: relative;
 }
 .left-bar li:hover a{
-	color: #428bca;
+	color: #2db7f5;
+}
+.left-bar .menu li.v-link-active::after{
+	content: '';
+	border-left: 3px solid #2db7f5;
+	position: absolute;
+	right: -2px;
+	top: 0;
+	height: 39px;
 }
 .memu-item.v-link-active{
-	color: #428bca;
+	color: #2db7f5;
 }
 .memu-item{
 	color: #333;
