@@ -87,7 +87,6 @@ export default {
 	}
 	#menu li{
 		float: left;
-		padding: 0 10px;
 		transition: all 0.3s ease 0s;
 		z-index: 3;
 		border-bottom: 3px solid transparent;
@@ -105,7 +104,7 @@ export default {
 		height: 78px;
 		line-height: 78px;
 		display: inline-block;
-		padding: 0 10px;
+		padding: 0 20px;
 	}
 	/*路由激活*/
 	#menu li.router-link-active a{
