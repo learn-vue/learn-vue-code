@@ -5,13 +5,6 @@
 </template>
 
 <script>
-    // module.exports = {
-    //     components: {
-    //     },
-    //     methods:{
-    //
-    //     }
-    // };
     
 </script>
 

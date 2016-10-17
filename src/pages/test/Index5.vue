@@ -1,20 +1,12 @@
 <template>
-	<div class="dev-overview">
-		55555555555555555
-	</div>
+    <div class="dev-overview">
+        22222222222222222222222222222222222222
+    </div>
 </template>
 
 <script>
-    // module.exports = {
-    //     components: {
-    //     },
-    //     methods:{
-    //
-    //     }
-    // };
-    
 </script>
 
 <style>
-	
+    
 </style>

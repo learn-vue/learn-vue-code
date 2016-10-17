@@ -101,7 +101,8 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 ```bash
 cnpm install vue-router  # 路由 http://router.vuejs.org/zh-cn/installation.html
 cnpm install vue-validator  #验证
-
+cnpm update moduleName  #更新node模块
+cnpm uninstall moudleName  #卸载node模块
 ```
 
 ```
@@ -112,3 +113,5 @@ vue UI   http://hackersome.com/p/bravf/VueUI
 
 [requireJs入门教程 (Click Me)](http://www.runoob.com/w3cnote/requirejs-tutorial-1.html)
 [代码高亮工具 (Click Me)](https://highlightjs.org/usage/)
+
+迁移工具指令 vue-migration-helper   54

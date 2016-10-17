@@ -31,7 +31,7 @@ module.exports = {
 			props: ['article'],
 			template: '<li class="article-list">\
 				<label for="" class="article-label">[ {{ article.label }} ]</label>\
-				<a href="{{article.link}}" target="_blank">{{ article.text }}</a>\
+				<a v-bind:href="article.link" target="_blank">{{ article.text }}</a>\
 			</li>'
 		}
 	},

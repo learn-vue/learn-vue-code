@@ -6,9 +6,18 @@
 		</div>
 		<div id="menu" class="">
 			<ul class="menu clearfix">
-				<li data-dec="{{menu.dec}}" v-link="{ path: menu.linkUrl }" v-for="(index,menu) in menuList">
-					<a class="nemu-item" v-link="{ path: menu.linkUrl }">{{ menu.text }}</a>
-				</li>
+				<router-link to="/" tag="li" exact>
+					<a>首页</a>
+				</router-link>
+				<router-link to="/page/components" tag="li">
+					<a>components</a>
+				</router-link>
+				<router-link to="/page/article" tag="li">
+					<a>资料</a>
+				</router-link>
+				<router-link to="/page/test" tag="li">
+					<a>实验基地</a>
+				</router-link>
 				<li>
 					<a href="http://cn.vuejs.org/guide/installation.html" target="_blank">VUE</a>
 				</li>
@@ -30,24 +39,7 @@
 export default {
 	data(){
 		return {
-			msg: '我是header',
-			menuList: [{
-				linkUrl: '/index',
-				text: '首页',
-				dec: 'index'
-			},
-			{
-				linkUrl: '/page/components',
-				text: 'components'
-			},
-			{
-				linkUrl: '/page/article',
-				text: '资料'
-			},
-			{
-				linkUrl: '/page/test',
-				text: '实验基地'
-			}]
+			msg: '我是header'
 		};
 	},
 	methods: {
@@ -95,7 +87,7 @@ export default {
 	}
 	#menu li{
 		float: left;
-		padding: 0 20px;
+		padding: 0 10px;
 		transition: all 0.3s ease 0s;
 		z-index: 3;
 		border-bottom: 3px solid transparent;
@@ -104,15 +96,19 @@ export default {
 		border-bottom: 3px solid #2db7f5;
 	}
 	/*路由激活*/
-	#menu li.v-link-active{
+	#menu li.router-link-active{
 		border-bottom: 3px solid #2db7f5;
 	}
 	#menu li a{
 		color: #666;
 		font-size: 14px;
+		height: 78px;
+		line-height: 78px;
+		display: inline-block;
+		padding: 0 10px;
 	}
 	/*路由激活*/
-	#menu li a.v-link-active{
+	#menu li.router-link-active a{
 		color: #2db7f5;
 		font-weight: 700;
 	}

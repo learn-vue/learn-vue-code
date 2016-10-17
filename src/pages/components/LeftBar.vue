@@ -1,13 +1,39 @@
 <template>
-	<div class="left-bar">
-		<ul class="menu clearfix">
-			<li v-for="(index,menu) in menuList" v-link="{ path: menu.linkUrl }">
-				<a class="memu-item" v-link="{ path: menu.linkUrl }">{{ menu.text }}</a>
-			</li>
-		</ul>
-	</div>
-	<div class="main-content">
-		<router-view></router-view>
+	<div v-bind:class="{'compontents-layout':true}">
+		<div class="left-bar">
+			<ul class="menu clearfix">
+				<router-link to="/page/components" tag="li" exact>
+					<a>select2</a>
+				</router-link>
+				<router-link to="/page/components/datePicker" tag="li">
+					<a>datePicker</a>
+				</router-link>
+				<router-link to="/page/components/mask" tag="li">
+					<a>mask</a>
+				</router-link>
+				<router-link to="/page/components/validate" tag="li">
+					<a>validate</a>
+				</router-link>
+				<router-link to="/page/components/tab" tag="li">
+					<a>tab</a>
+				</router-link>
+				<router-link to="/page/components/pager" tag="li">
+					<a>pager</a>
+				</router-link>
+				<router-link to="/page/components/table" tag="li">
+					<a>table</a>
+				</router-link>
+				<router-link to="/page/components/modal" tag="li">
+					<a>modal</a>
+				</router-link>
+				<router-link to="/page/components/modal" tag="li">
+					<a>top</a>
+				</router-link>
+			</ul>
+		</div>
+		<div class="main-content">
+			<router-view></router-view>
+		</div>
 	</div>
 </template>
 
@@ -15,42 +41,7 @@
 export default {
 	data(){
 		return {
-			menuList: [{
-				linkUrl: '/page/components/select2',
-				text: 'select2'
-			},
-			{
-				linkUrl: '/page/components/datePicker',
-				text: 'datePicker'
-			},
-			{
-				linkUrl: '/page/components/mask',
-				text: 'mask'
-			},
-			{
-				linkUrl: '/page/components/validate',
-				text: 'validate'
-			},
-			{
-				linkUrl: '/page/components/tab',
-				text: 'tab'
-			},
-			{
-				linkUrl: '/page/components/pager',
-				text: 'pager'
-			},
-			{
-				linkUrl: '/page/components/table',
-				text: 'table'
-			},
-			{
-				linkUrl: '/page/components/modal',
-				text: 'modal'
-			},
-			{
-				linkUrl: '/page/components/modal',
-				text: 'top'
-			}]
+			a: 'a'
 		};
 	},
 	methods: {
@@ -66,6 +57,9 @@ export default {
 </script>
 
 <style>
+.compontents-layout{
+	position: relative;
+}
 .left-bar{
 	position: absolute;
 	width: 180px;
@@ -75,16 +69,25 @@ export default {
 .main-content{
 	width: 100%;
 	padding-left: 200px;
+	margin-top: 0;
 }
 .left-bar li{
 	padding: 10px 0;
 	font-size: 14px;
 	position: relative;
 }
+.left-bar li a{
+	color: #666;
+		font-size: 14px;
+}
+.left-bar li.router-link-active a{
+	color: #2db7f5;
+	font-weight: 700;
+}
 .left-bar li:hover a{
 	color: #2db7f5;
 }
-.left-bar .menu li.v-link-active::after{
+.left-bar .menu li.router-link-active::after{
 	content: '';
 	border-left: 3px solid #2db7f5;
 	position: absolute;
@@ -92,13 +95,13 @@ export default {
 	top: 0;
 	height: 39px;
 }
-.memu-item.v-link-active{
+.memu-item.router-link-active{
 	color: #2db7f5;
 }
 .memu-item{
 	color: #333;
 }
 h4{
-	margin: 20px auto;
+	padding: 20px 0;
 }
 </style>

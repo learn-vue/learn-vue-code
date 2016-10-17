@@ -1,6 +1,6 @@
 <template>
 	<h4>select2插件</h4>
-	<div class="demo">
+	<!-- <div class="demo">
 		<span class="span-label">select2插件：</span>
 		<select v-select="selected1" width="300px" allowclear="false" placeholder="请选择一个选项">
 			<option v-for="o in options" :value="o.id">{{ o.text }}</option>
@@ -13,11 +13,11 @@
 			<option v-for="o in options" :value="o.id">{{ o.text }}</option>
 		</select>
 		<span class="select-label">选中的值: <span class="text-primary">{{selected2}}</span></span>
-	</div>
+	</div> -->
 </template>
 
 <script>
-	require('../../lib/select2/index');
+	// require('../../lib/select2/index');
 
 	module.exports = {
 		data: function(){
@@ -46,6 +46,9 @@
 </script>
 
 <style scoped>
+h4{
+	margin-top: 0;
+}
 .demo{
 	margin-bottom: 10px;
 }

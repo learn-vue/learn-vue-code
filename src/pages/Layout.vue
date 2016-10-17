@@ -1,6 +1,8 @@
 <template>
-	<l-header></l-header>
-	<router-view></router-view>
+	<div class="layout">
+		<l-header></l-header>
+		<router-view></router-view>
+	</div>
 </template>
 
 <script>
@@ -12,6 +14,9 @@
 	};
 </script>
 
-<style>
-	
+<style scoped>
+	.layout{
+		width: 100%;
+		height: auto;
+	}
 </style>

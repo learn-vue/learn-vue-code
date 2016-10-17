@@ -1,12 +1,13 @@
 <template>
-<div class="text-content">
-	<div id="app1" v-bind:title="message">v-bind:title="message"</div>
-</div>
-
-<ul>
-	<todo v-for="todo in todos" v-bind:todo="todo"></todo>
-</ul>
-
+	<div>
+		<div class="text-content">
+			<div id="app1" v-bind:title="message">v-bind:title="message"</div>
+		</div>
+		<div>ytes</div>
+		<ul>
+			<todo v-for="todo in todos" v-bind:todo="todo"></todo>
+		</ul>
+	</div>
 </template>
 
 <script>
