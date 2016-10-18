@@ -2,32 +2,20 @@
 	<div v-bind:class="{'compontents-layout':true}">
 		<div class="left-bar">
 			<ul class="menu clearfix">
-				<router-link to="/page/components" tag="li" exact>
-					<a>select2</a>
+				<router-link to="/page/test" tag="li" exact>
+					<a>测试</a>
 				</router-link>
-				<router-link to="/page/components/datePicker" tag="li" exact>
-					<a>datePicker</a>
+				<router-link to="/page/test/test1" tag="li" exact>
+					<a>1号实验室</a>
 				</router-link>
-				<router-link to="/page/components/mask" tag="li" exact>
-					<a>mask</a>
+				<router-link to="/page/test/test2" tag="li" exact>
+					<a>2号实验室</a>
 				</router-link>
-				<router-link to="/page/components/validate" tag="li" exact>
-					<a>validate</a>
+				<router-link to="/page/test/test3" tag="li" exact>
+					<a>3号实验室</a>
 				</router-link>
-				<router-link to="/page/components/tab" tag="li" exact>
-					<a>tab</a>
-				</router-link>
-				<router-link to="/page/components/pager" tag="li" exact>
-					<a>pager</a>
-				</router-link>
-				<router-link to="/page/components/table" tag="li" exact>
-					<a>table</a>
-				</router-link>
-				<router-link to="/page/components/modal" tag="li" exact>
-					<a>modal</a>
-				</router-link>
-				<router-link to="/page/components/top" tag="li" exact>
-					<a>top</a>
+				<router-link to="/page/test/test4" tag="li" exact>
+					<a>4号实验室</a>
 				</router-link>
 			</ul>
 		</div>
