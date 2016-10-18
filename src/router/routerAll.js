@@ -3,15 +3,17 @@ import Layout from 'src/pages/Layout.vue';
 
 import Index from 'src/pages/Index.vue';
 
+import V404 from 'src/pages/404.vue';
+
 // 妈蛋 坑 vue-router v2 变成数组了
 export default [
 	{
 		path: '/',
-		component: require('src/pages/Layout.vue'),
+		component: Layout,
 		children: [
 			{
 				path: '/',
-				component: require('src/pages/Index.vue')
+				component: Index
 			},
 			{
 				path: 'index',
@@ -20,24 +22,8 @@ export default [
 		]
 	},
 	{
-		path: '/Index2',
-		component: require('src/pages/test/Index2.vue')
-	},
-	{
-		path: '/Index3',
-		component: require('src/pages/test/Index3.vue')
-	},
-	{
-		path: '/Index4',
-		component: require('src/pages/test/Index4.vue')
-	},
-	{
-		path: '/Index5',
-		component: require('src/pages/test/Index5.vue')
-	},
-	{
 		path: '/page',
-		component: require('src/pages/Layout.vue'),
+		component: Layout,
 		children: [
 			{
 				path: '/',
@@ -95,8 +81,43 @@ export default [
 			},
 			{
 				path: 'test',
-				component: require('src/pages/test.vue')
+				component: require('src/pages/testing/LeftBar.vue'),
+				children: [
+					{
+						path: '/',
+						component: require('src/pages/testing/test.vue')
+					},
+					{
+						path: 'test',
+						component: require('src/pages/testing/test.vue')
+					},
+					{
+						path: 'test1',
+						component: require('src/pages/testing/test1.vue')
+					},
+					{
+						path: 'test2',
+						component: require('src/pages/testing/test2.vue')
+					},
+					{
+						path: 'test3',
+						component: require('src/pages/testing/test3.vue')
+					},
+					{
+						path: 'test4',
+						component: require('src/pages/testing/test4.vue')
+					}
+				]
 			}
 		]
+	},
+	{
+		path: '/404',
+		component: V404
+	},
+	// not found handler
+	{
+		path: '*',
+		component: V404
 	}
 ];
