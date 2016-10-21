@@ -67,7 +67,6 @@ export default {
 	border-right: 1px #ccc solid;
 }
 .main-content{
-	width: 100%;
 	padding-left: 200px;
 	margin-top: 0;
 }

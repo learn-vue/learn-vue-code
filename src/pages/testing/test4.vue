@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="text-content">
-			<div id="app1" v-bind:title="message">v-bind:title="message"</div>
+			<div id="app1" v-bind:title="message">4号实验室等待被占领</div>
 		</div>
 		<div>ytes</div>
 		<ul>
@@ -33,7 +33,6 @@ module.exports = {
 .text-content{
 	height: 200px;
 	background: rgba(255,255,255,0.9);
-	width: 1200px;
 	margin: 0 auto;
 	padding: 20px 15px;
 }

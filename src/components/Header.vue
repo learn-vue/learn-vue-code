@@ -18,9 +18,9 @@
 				<router-link to="/page/test" tag="li">
 					<a>实验基地</a>
 				</router-link>
-				<li>
+				<!-- <li>
 					<a href="http://cn.vuejs.org/guide/installation.html" target="_blank">VUE</a>
-				</li>
+				</li> -->
 				<li>
 					<a href="http://vuefe.cn/guide/" target="_blank">VUE 2.0</a>
 				</li>

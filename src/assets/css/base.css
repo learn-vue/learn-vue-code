@@ -12,8 +12,33 @@ ul li,ol li{
 }
 a{
 	text-decoration: none;
-    color: #2db7f5;
-    cursor: pointer;
-    outline: medium none;
-    transition: color 0.3s ease 0s;
+	color: #2db7f5;
+	cursor: pointer;
+	outline: medium none;
+	transition: color 0.3s ease 0s;
+}
+a:active,a:hover,a:visited,a:focus,a:link{
+	outline: none;
+}
+.btn{
+	font-size: 12px;
+	border-radius: 4px;
+	padding: 6px 12px;
+	outline: none;
+	background: #fff;
+	border: 1px solid #2db7f5;
+	color: #2db7f5;
+	cursor: pointer;
+}
+.btn:hover{
+	background: #2db7f5;
+	color: #fff;
+	transition: all 0.3s ease 0s;
+}
+.btn[disabled]{
+	background: #999;
+	border: 1px solid #aaa;
+	color: #fff;
+	transition: all 0.3s ease 0s;
+	cursor: not-allowed;
 }

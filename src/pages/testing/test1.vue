@@ -1,12 +1,23 @@
 <template>
-	<div>
-		<div class="text-content">
-			<div id="app1" v-bind:title="message">v-bind:title="message"</div>
+	<div class="text-content">
+		<div class="test-row" v-bind:id="dynamicId">id绑定</div>
+		<div class="test-row">
+			<button class="btn btn-success" v-bind:disabled="someDynamicCondition1">可用的按钮</button>
+			<button class="btn btn-success" v-bind:disabled="someDynamicCondition2">不可用的按钮</button>
 		</div>
-		<div>ytes</div>
-		<ul>
-			<todo v-for="todo in todos" v-bind:todo="todo"></todo>
-		</ul>
+		<div class="test-row">
+			<span>表达式数据绑定 0 + 1 = {{ num1 + 1}}</span><br>
+			<span>三元表达式数据绑定  ok ? {{ ok ? 'YES' : 'NO' }}</span><br>
+			<span>数组操作表达式数据绑定 '12345' => '{{ arr1.split('').reverse().join('') }}'</span>
+		</div>
+
+		<div class="test-row">
+			<span>过滤器</span><br>
+			<span>日期格式化 now：{{ now | date }}</span><br>
+			<span>日期格式化 now：{{ now | date('yyyy-MM-dd hh:mm:ss') }}</span><br>
+			<span>日期格式化 now：{{ now | date('hh:mm') }}</span><br>
+			<span>金额格式化 示例金额： {{ moneymock | money }}元</span><br>
+		</div>
 	</div>
 </template>
 
@@ -15,7 +26,16 @@ module.exports = {
 	data: function(){
 		return {
 			message: 'Hello Vue.js!' + new Date(),
-			todos: [1, 2, 3, 4, 5]
+			todos: [1, 2, 3, 4, 5],
+			dynamicId: 'testId',
+			someDynamicCondition1: false,
+			someDynamicCondition2: true,
+			num1: 0,
+			num2: 1,
+			ok: true,
+			arr1: '12345',
+			now: new Date().getTime(),
+			moneymock: '888888.88'
 		};
 	},
 	components: {
@@ -33,8 +53,11 @@ module.exports = {
 .text-content{
 	height: 200px;
 	background: rgba(255,255,255,0.9);
-	width: 1200px;
 	margin: 0 auto;
 	padding: 20px 15px;
+}
+.test-row{
+	border-bottom: 1px #ccc dashed; 
+	padding: 15px 0;
 }
 </style>
