@@ -23,6 +23,22 @@ module.exports = {
 				label: '文档手册',
 				link: 'http://vuefe.cn/guide/',
 				text: 'VUE 2.0 中文文档'
+			}, {
+				label: '入门教程',
+				link: 'https://zhuanlan.zhihu.com/p/23134551',
+				text: 'Vue 2.0 的建议学习顺序[知乎@尤雨溪]'
+			}, {
+				label: '文档手册',
+				link: 'https://webpack.js.org/get-started/',
+				text: 'webpack文档'
+			}, {
+				label: '文档手册',
+				link: 'http://vue-loader.vuejs.org/en/configurations/asset-url.html',
+				text: 'vue-loader文档'
+			}, {
+				label: '技术文章',
+				link: 'https://segmentfault.com/a/1190000007238999',
+				text: '前端路由的两种实现原理'
 			}]
 		};
 	},

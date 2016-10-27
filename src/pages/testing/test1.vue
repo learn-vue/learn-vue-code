@@ -18,6 +18,11 @@
 			<span>日期格式化 now：{{ now | date('hh:mm') }}</span><br>
 			<span>金额格式化 示例金额： {{ moneymock | money }}元</span><br>
 		</div>
+
+		<div class="test-row">
+			<span>计算属性</span><br>
+			<span>{{message}} ==>{{ reversedMessage }}</span><br>
+		</div>
 	</div>
 </template>
 
@@ -34,9 +39,16 @@ module.exports = {
 			num2: 1,
 			ok: true,
 			arr1: '12345',
-			now: new Date().getTime(),
+			now: Date.now(),
 			moneymock: '888888.88'
 		};
+	},
+	computed: {
+		// a computed getter
+		reversedMessage: function () {
+			// `this` points to the vm instance
+			return this.message.split('').reverse().join('');
+		}
 	},
 	components: {
 		'todo': {
