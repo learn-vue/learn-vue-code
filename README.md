@@ -115,5 +115,3 @@ vue UI   http://hackersome.com/p/bravf/VueUI
 [代码高亮工具 (Click Me)](https://highlightjs.org/usage/)
 
 迁移工具指令 vue-migration-helper   54
-
-使用vue构建单页面应用-前端自动化的探索之路
