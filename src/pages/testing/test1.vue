@@ -23,6 +23,22 @@
 			<span>计算属性</span><br>
 			<span>{{message}} ==>{{ reversedMessage }}</span><br>
 		</div>
+
+		<div class="test-row">
+			<span>指令</span><br>
+			<p v-if="seen">Now you see me</p>
+		</div>
+		<div class="test-row">
+			<span>参数</span><br>
+			<a v-bind:href="url">绑定url：v-bind:href</a><br/>
+			<a :href="url">缩写 :href</a>
+			<p v-on:click="hello">点击输出 v-on:click</p>
+			<p @click="hello">缩写 @click</p>
+		</div>
+		<div class="test-row">
+			<span>计算缓存</span><br>
+			<p v-if="seen">Now you see me</p>
+		</div>
 	</div>
 </template>
 
@@ -40,7 +56,9 @@ module.exports = {
 			ok: true,
 			arr1: '12345',
 			now: Date.now(),
-			moneymock: '888888.88'
+			moneymock: '888888.88',
+			seen: true,
+			url: 'http://www.baidu.com'
 		};
 	},
 	computed: {
@@ -57,7 +75,9 @@ module.exports = {
 		}
 	},
 	methods: {
-
+		hello: function(){
+			console.info('hello!');
+		}
 	}
 }
 </script>

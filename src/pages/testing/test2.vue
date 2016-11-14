@@ -33,4 +33,9 @@ module.exports = {
 	margin: 0 auto;
 	padding: 20px 15px;
 }
+.test-row{
+	border-bottom: 1px #ccc dashed; 
+	padding: 15px 0;
+}
 </style>
+
