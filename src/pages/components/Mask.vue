@@ -1,6 +1,8 @@
 <template>
 	<div>
 		<h4>mask组件</h4>
+		<div>{{ msg }}</div>
+		<input type="text" v-model="msg" />
 		<div class="demo">
 			<span class="span-label">mask组件：</span>
 		</div>
@@ -13,6 +15,7 @@
 	module.exports = {
 		data: function(){
 			return {
+				msg: 'hello world',
 				selected1: '',
 				selected2: '',
 				selected3: '',

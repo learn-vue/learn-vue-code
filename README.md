@@ -113,5 +113,7 @@ vue UI   http://hackersome.com/p/bravf/VueUI
 
 [requireJs入门教程 (Click Me)](http://www.runoob.com/w3cnote/requirejs-tutorial-1.html)
 [代码高亮工具 (Click Me)](https://highlightjs.org/usage/)
+[vue-cli的webpack模板项目配置文件分析 (Click Me)](http://blog.csdn.net/hongchh/article/details/55113751#comments)
+
 
 迁移工具指令 vue-migration-helper   54

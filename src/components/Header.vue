@@ -22,7 +22,7 @@
 					<a href="http://cn.vuejs.org/guide/installation.html" target="_blank">VUE</a>
 				</li> -->
 				<li>
-					<a href="http://vuefe.cn/guide/" target="_blank">VUE 2.0</a>
+					<a href="https://cn.vuejs.org/v2/guide/" target="_blank">VUE 2.0</a>
 				</li>
 				<li>
 					<a href="http://router.vuejs.org/zh-cn/installation.html" target="_blank">VUE-router</a>

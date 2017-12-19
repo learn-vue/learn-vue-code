@@ -1,19 +1,21 @@
 <template>
-	<h4>select2插件</h4>
-	<!-- <div class="demo">
-		<span class="span-label">select2插件：</span>
-		<select v-select="selected1" width="300px" allowclear="false" placeholder="请选择一个选项">
-			<option v-for="o in options" :value="o.id">{{ o.text }}</option>
-		</select>
-		<span class="select-label">选中的值: <span class="text-primary">{{selected1}}</span></span>
+	<div>
+		<h4>select2插件</h4>
+		<div class="demo">
+			<span class="span-label">select2插件：</span>
+			<select v-select2="{value: selected1,with:'300px',allowclear:'false', placeholder:'请选择一个选项'}">
+				<option v-for="o in options" :value="o.id">{{ o.text }}</option>
+			</select>
+			<span class="select-label">选中的值: <span class="text-primary">{{selected1}}</span></span>
+		</div>
+		<!-- <div class="demo">
+			<span class="span-label">select2允许清空：</span>
+			<select v-select="selected2" width="300px" allowclear="true" placeholder="请选择一个选项">
+				<option v-for="o in options" :value="o.id">{{ o.text }}</option>
+			</select>
+			<span class="select-label">选中的值: <span class="text-primary">{{selected2}}</span></span>
+		</div> -->
 	</div>
-	<div class="demo">
-		<span class="span-label">select2允许清空：</span>
-		<select v-select="selected2" width="300px" allowclear="true" placeholder="请选择一个选项">
-			<option v-for="o in options" :value="o.id">{{ o.text }}</option>
-		</select>
-		<span class="select-label">选中的值: <span class="text-primary">{{selected2}}</span></span>
-	</div> -->
 </template>
 
 <script>
