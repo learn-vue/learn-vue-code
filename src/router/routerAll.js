@@ -80,6 +80,36 @@ export default [
 				component: require('src/pages/article/index.vue')
 			},
 			{
+				path: 'canvas',
+				component: require('src/pages/canvas/LeftBar.vue'),
+				children: [
+					{
+						path: '/',
+						component: require('src/pages/canvas/test.vue')
+					},
+					{
+						path: 'test',
+						component: require('src/pages/canvas/test.vue')
+					},
+					{
+						path: 'test1',
+						component: require('src/pages/canvas/test1.vue')
+					},
+					{
+						path: 'test2',
+						component: require('src/pages/canvas/test2.vue')
+					},
+					{
+						path: 'test3',
+						component: require('src/pages/canvas/test3.vue')
+					},
+					{
+						path: 'test4',
+						component: require('src/pages/canvas/test4.vue')
+					}
+				]
+			},
+			{
 				path: 'test',
 				component: require('src/pages/testing/LeftBar.vue'),
 				children: [

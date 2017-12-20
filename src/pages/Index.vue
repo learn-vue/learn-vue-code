@@ -147,7 +147,7 @@ module.exports = {
 	height: 100%;
 	top: 0;
 	bottom: 0;
-	background: rgba(255, 255, 255, 1.0);
+	background: rgba(0, 0, 0, 1.0);
 	z-index: -1;
 }
 </style>

@@ -12,6 +12,9 @@
 				<router-link to="/page/components" tag="li">
 					<a>components</a>
 				</router-link>
+				<router-link to="/page/canvas" tag="li">
+					<a>canvas</a>
+				</router-link>
 				<router-link to="/page/article" tag="li">
 					<a>资料</a>
 				</router-link>
