@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<canvas id='cas' width="1000" height="500">浏览器不支持canvas，请更新浏览器后再浏览</canvas>
+		<canvas id='cas' width="1000" height="500">您的浏览器不支持canvas，请更新浏览器后再浏览</canvas>
 		<div style="width:50px;margin:10px auto; display: none">
 			<img id="tulip" src="../../assets/logo.png" alt="The Tulip" width="200" height="200" />
 			<button id="controlBtn">停止</button>
