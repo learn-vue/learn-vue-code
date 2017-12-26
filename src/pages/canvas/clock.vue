@@ -26,7 +26,7 @@ module.exports = {
 	},
 	beforeDestroy () {
 		clearInterval(this.drawTimeInterval)
-    },
+	},
 	methods: {
 		drawClock () {
 			this.context = this.cas.getContext('2d')

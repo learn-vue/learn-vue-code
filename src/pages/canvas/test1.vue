@@ -15,7 +15,6 @@ module.exports = {
 	components: {
 	},
 	active(){
-		document.getElementById('qunxing').getContext("2d").clearRect(0,0,1000,500);
 	},
 	mounted(){
 		/*
@@ -32,7 +31,7 @@ module.exports = {
 		 * ease: 缓动函数 提供linear，Quad，Cubic，Quart，Quint，Sine，Expo，Circ，Elastic，Back 包含easeIn,easeOut,easeInOut
 		 * interval: 粒子间开始移动间隔
 		 */
-		var particles = new Particless({
+		this.particles = new Particless({
 			canvasId: 'qunxing',
 			imgUrl: '/static/images/canvas/logo.jpg',
 			cols: 160,
@@ -48,7 +47,9 @@ module.exports = {
 			particleOffset: 0,
 			ease: 'easeInOutBack'
 		});
-		particles.animate();
+		this.particles.animate();
+	},
+	beforeDestroy () {
 	},
 	methods: {
 
