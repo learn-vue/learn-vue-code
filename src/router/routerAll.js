@@ -96,8 +96,8 @@ export default [
 						component: require('src/pages/canvas/test1.vue')
 					},
 					{
-						path: 'test2',
-						component: require('src/pages/canvas/test2.vue')
+						path: 'clock',
+						component: require('src/pages/canvas/clock.vue')
 					},
 					{
 						path: 'test3',

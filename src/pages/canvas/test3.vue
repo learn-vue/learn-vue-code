@@ -1,12 +1,6 @@
 <template>
 	<div>
-		<div class="text-content">
-			<div id="app1" v-bind:title="message"></div>
-		</div>
-		<div>ytes</div>
-		<ul>
-			<todo v-for="todo in todos" v-bind:todo="todo"></todo>
-		</ul>
+		<canvas id='cas' width="1000" height="500">您的浏览器不支持canvas，请更新浏览器后再浏览</canvas>
 	</div>
 </template>
 
@@ -14,26 +8,19 @@
 module.exports = {
 	data: function(){
 		return {
-			message: 'Hello Vue.js!' + new Date(),
-			todos: [1, 2, 3, 4, 5]
 		};
 	},
 	components: {
-		'todo': {
-			props: ['todo'],
-			template: '<li>这是第{{todo}}条</li>'
-		}
 	},
 	methods: {
-
 	}
 }
 </script>
 <style scoped>
-.text-content{
-	height: 200px;
-	background: rgba(255,255,255,0.9);
-	margin: 0 auto;
-	padding: 20px 15px;
+#cas{
+	display: block;
+	border:1px solid;
+	margin:auto;
+	background: #000;
 }
 </style>

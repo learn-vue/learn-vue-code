@@ -8,8 +8,8 @@
 				<router-link to="/page/canvas/test1" tag="li" exact>
 					<a>2222222222</a>
 				</router-link>
-				<router-link to="/page/canvas/test2" tag="li" exact>
-					<a>3333333333</a>
+				<router-link to="/page/canvas/clock" tag="li" exact>
+					<a>canvas时钟</a>
 				</router-link>
 				<router-link to="/page/canvas/test3" tag="li" exact>
 					<a>4444444444</a>
