@@ -4,35 +4,58 @@ require('./select2.css');
 require('./select2.min.js');
 require('./i18n/zh-CN.js');
 
-Vue.directive('select2', {
-	twoWay: true,
-	priority: 1000,
-	params: ['width', 'allowclear', 'placeholder'],
+Vue.directive('selectt', {
+	// bind：只调用一次，指令第一次绑定到元素时调用。在这里可以进行一次性的初始化设置。
 	bind: function (el, binding) {
-		// 只调用一次，在指令第一次绑定到元素上时调用。
-		// var self = this;
-		// var params = this.params;
-		var data = binding.value;
-		console.info(el);
-		// console.info($(el));
-		console.info(data);
-		// console.info(this.params);
-		// $(el).select2({
-		// 	language: 'zh-CN',
-		// 	width: data.width || '226px',
-		// 	allowClear: data.allowclear ? data.allowclear === 'true' ? true : false : true,
-		// 	placeholder: data.placeholder || '请选择'
-		// }).on('change', function () {
-		// 	// $(el).set(this.value)
-		// })
 	},
-	update: function (value) {
-		console.info(value);
-		// 在 bind 之后立即以初始值为参数第一次调用，之后每当绑定值变化时调用，参数为新值与旧值
+	// inserted：被绑定元素插入父节点时调用 (仅保证父节点存在，但不一定已被插入文档中)。
+	inserted (el, binding, vnode, oldVnode) {
+		var data = binding.value;
+		/*eslint-disable */
+		var me = this;
+		$(el).select2({
+			language: 'zh-CN',
+			width: data.width || '226px',
+			allowClear: data.allowclear ? data.allowclear === 'true' ? true : false : true,
+			placeholder: data.placeholder || '请选择'
+		}).on('change', function (e) { 
+			console.info($(el).val())
+		});
+	},
+	// update：所在组件的 VNode 更新时调用，但是可能发生在其子 VNode 更新之前。指令的值可能发生了改变，也可能没有。但是你可以通过比较更新前后的值来忽略不必要的模板更新 (详细的钩子函数参数见下)。
+	update: function (el, binding, vnode, oldVnode) {
+		console.info('update')
 		// $(this.el).val(value).trigger('change')
 	},
-	unbind: function () {
-		// 只调用一次，在指令从元素上解绑时调用。
-		// $(this.el).off().select2('destroy')
+	// componentUpdated：指令所在组件的 VNode 及其子 VNode 全部更新后调用。
+	componentUpdated (el, binding) {
+		console.info('componentUpdated')
+	},
+	// unbind：只调用一次，指令与元素解绑时调用。
+	unbind (el, binding) {
+		console.info('unbind')
+		$(el).off().select2('destroy')
+	}
+});
+
+Vue.directive('checkLength', {
+	// bind：只调用一次，指令第一次绑定到元素时调用。在这里可以进行一次性的初始化设置。
+	bind: function (el, binding) {
+		console.info('bind')
+	},
+	// inserted：被绑定元素插入父节点时调用 (仅保证父节点存在，但不一定已被插入文档中)。
+	inserted (el, binding, vnode, oldVnode) {
+		console.info('inserted')
+	},
+	// update：所在组件的 VNode 更新时调用，但是可能发生在其子 VNode 更新之前。指令的值可能发生了改变，也可能没有。但是你可以通过比较更新前后的值来忽略不必要的模板更新 (详细的钩子函数参数见下)。
+	update: function (el, binding, vnode) {
+		// $(this.el).val(value).trigger('change')
+	},
+	// componentUpdated：指令所在组件的 VNode 及其子 VNode 全部更新后调用。
+	componentUpdated (el, binding) {
+	},
+	// unbind：只调用一次，指令与元素解绑时调用。
+	unbind (el, binding) {
+		console.info('unbind')
 	}
 });

@@ -20,7 +20,7 @@ module.exports = merge(baseWebpackConfig, {
   plugins: [
     // 全局依赖jQuery
     new webpack.ProvidePlugin({
-      $$ : "jquery",
+      $ : "jquery",
       jQuery : "jquery",
       "window.jQuery" : "jquery"
     }),

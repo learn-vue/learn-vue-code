@@ -1,29 +1,35 @@
 <template>
 	<div>
-		<h4>select2插件</h4>
-		<div class="demo">
-			<span class="span-label">select2插件：</span>
-			<select v-select2="{value: selected1,with:'300px',allowclear:'false', placeholder:'请选择一个选项'}">
+		<h4>select2指令</h4>
+		<div class="demo" >
+			<span class="span-label">select2指令：</span>
+			<select id="demo"  v-model="selected" v-selectt="{value: selected1,with:'300px',allowclear:'false', placeholder:'请选择一个选项'}">
 				<option v-for="o in options" :value="o.id">{{ o.text }}</option>
 			</select>
-			<span class="select-label">选中的值: <span class="text-primary">{{selected1}}</span></span>
+			<span class="select-label">选中的值: <span class="text-primary">{{selected}}</span></span>
 		</div>
-		<!-- <div class="demo">
+		<div class="demo">
 			<span class="span-label">select2允许清空：</span>
-			<select v-select="selected2" width="300px" allowclear="true" placeholder="请选择一个选项">
+			<select v-model="selected2" v-selectt="{value: selected1,with:'300px',allowclear:'false', placeholder:'请选择一个选项'}">
 				<option v-for="o in options" :value="o.id">{{ o.text }}</option>
 			</select>
 			<span class="select-label">选中的值: <span class="text-primary">{{selected2}}</span></span>
-		</div> -->
+		</div>
+		<div class="demo">
+			<span class="span-label">指令检查长度:</span>
+			<input v-model="selected3" v-checkLength="{a: 2}" />
+			<span class="select-label">输入的值: <span class="text-primary">{{selected3}}</span></span>
+		</div>
 	</div>
 </template>
 
 <script>
-	// require('../../lib/select2/index');
+	require('../../lib/select2/index');
 
 	module.exports = {
 		data: function(){
 			return {
+				selected: '',
 				selected1: '',
 				selected2: '',
 				selected3: '',
@@ -43,6 +49,8 @@
 				{ id: '11个选项', text: '这是第11个选项' },
 				{ id: '12个选项', text: '这是第12个选项' }]
 			};
+		},
+		mounted(){
 		}
 	};
 </script>
