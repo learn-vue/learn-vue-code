@@ -104,8 +104,36 @@ export default [
 						component: require('src/pages/canvas/test3.vue')
 					},
 					{
-						path: 'test4',
-						component: require('src/pages/canvas/test4.vue')
+						path: 'threeJsModel',
+						component: require('src/pages/canvas/threeJsModel.vue')
+					},
+					{
+						path: 'threeJsModel1',
+						component: require('src/pages/canvas/threeJsModel1.vue')
+					},
+					{
+						path: 'threeJsModel2',
+						component: require('src/pages/canvas/threeJsModel2.vue')
+					},
+					{
+						path: 'threeJsModel3',
+						component: require('src/pages/canvas/threeJsModel3.vue')
+					},
+					{
+						path: 'threeJsModel4',
+						component: require('src/pages/canvas/threeJsModel4.vue')
+					},
+					{
+						path: 'threeJsModel5',
+						component: require('src/pages/canvas/threeJsModel5.vue')
+					},
+					{
+						path: 'threeJsModel6',
+						component: require('src/pages/canvas/threeJsModel6.vue')
+					},
+					{
+						path: 'deutser',
+						component: require('src/pages/deutser/index.vue')
 					}
 				]
 			},

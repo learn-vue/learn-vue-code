@@ -3,10 +3,10 @@
 		<div class="left-bar">
 			<ul class="menu clearfix">
 				<router-link to="/page/canvas" tag="li" exact>
-					<a>1111111111</a>
+					<a>canvas球体</a>
 				</router-link>
 				<router-link to="/page/canvas/test1" tag="li" exact>
-					<a>2222222222</a>
+					<a>canvas粒子喷图</a>
 				</router-link>
 				<router-link to="/page/canvas/clock" tag="li" exact>
 					<a>canvas时钟</a>
@@ -14,8 +14,29 @@
 				<router-link to="/page/canvas/test3" tag="li" exact>
 					<a>4444444444</a>
 				</router-link>
-				<router-link to="/page/canvas/test4" tag="li" exact>
-					<a>5555555555</a>
+				<router-link to="/page/canvas/threeJsModel" tag="li" exact>
+					<a>threeJs模型</a>
+				</router-link>
+				<router-link to="/page/canvas/threeJsModel1" tag="li" exact>
+					<a>threeJs三维模型</a>
+				</router-link>
+				<router-link to="/page/canvas/threeJsModel2" tag="li" exact>
+					<a>threeJs基本组件</a>
+				</router-link>
+				<router-link to="/page/canvas/threeJsModel3" tag="li" exact>
+					<a>基本粒子</a>
+				</router-link>
+				<router-link to="/page/canvas/threeJsModel4" tag="li" exact>
+					<a>动态粒子1</a>
+				</router-link>
+				<router-link to="/page/canvas/threeJsModel5" tag="li" exact>
+					<a>动态粒子2</a>
+				</router-link>
+				<router-link to="/page/canvas/threeJsModel6" tag="li" exact>
+					<a>模拟特效</a>
+				</router-link>
+				<router-link to="/page/canvas/deutser" tag="li" exact>
+					<a>模拟特效demo</a>
 				</router-link>
 			</ul>
 		</div>
