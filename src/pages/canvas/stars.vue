@@ -43,7 +43,7 @@ module.exports = {
 		// position and point the camera to the center of the scene
 		camera.position.x = 20;
 		camera.position.y = 0;
-		camera.position.z = 150;
+		camera.position.z = 200;
 
 		// add the output of the renderer to the html element
 		document.getElementById("WebGL-output").appendChild(webGLRenderer.domElement);
@@ -82,9 +82,15 @@ module.exports = {
 			});
 
 
-			var range = 500;
-			for (var i = 0; i < 5000; i++) {
-				var particle = new THREE.Vector3(Math.random() * range - range / 2, Math.random() * range - range / 2, Math.random() * range - range / 2);
+			var rangeX = 500;
+			var rangeY = 300;
+			var rangeZ = 300;
+			for (var i = 0; i < 2000; i++) {
+				var particle = new THREE.Vector3(
+					Math.random() * rangeX - rangeX / 2,
+					Math.random() * rangeY - rangeY / 2,
+					Math.random() * rangeZ - rangeZ / 2
+				);
 				geom.vertices.push(particle);
 			}
 
@@ -120,7 +126,7 @@ module.exports = {
 		gui.add(controls, 'sizeAttenuation').onChange(controls.redraw);
 		gui.add(controls, 'rotateSystem');
 		gui.add(controls, 'rolateX', -100, 100);
-		gui.add(controls, 'rolateY', -100, 100);
+		gui.add(controls, 'rolateY', -200, 200);
 		controls.redraw();
 
 		render();
@@ -132,7 +138,7 @@ module.exports = {
 			stats.update();
 			TWEEN.update();
 			camera.position.x = controls.rolateX;
-			camera.position.y = controls.rolateY;
+			camera.position.y = -controls.rolateY;
 			camera.lookAt(scene.position);
 			if (controls.rotateSystem) {
 				step += 0.01;
@@ -147,7 +153,7 @@ module.exports = {
 
 		$('#WebGL-output').on('mousemove' , function(e){
 			var x = (e.offsetX - 500) / 5
-			var y = (e.offsetY - 500) / 5
+			var y = (e.offsetY - 500) / 2.5
 			var tween = new TWEEN.Tween(controls).to({
 				rolateX: x,
 				rolateY: y,
