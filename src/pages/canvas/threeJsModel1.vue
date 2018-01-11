@@ -31,9 +31,9 @@ module.exports = {
 		renderer.setClearColor(0x000, 1.0);
 		renderer.setSize(1000, 500)
 		// 阴影
-		renderer.shadowMap.enabled = true
+		renderer.shadowMapEnabled = true
 		// 添加辅助的坐标轴和平面
-		var axes = new THREE.AxesHelper(100);
+		var axes = new THREE.AxisHelper(100);
 		scene.add(axes);
 
 		var planeGeometry = new THREE.PlaneGeometry(60, 20);

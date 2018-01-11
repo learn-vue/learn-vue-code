@@ -38,7 +38,7 @@ module.exports = {
 		// 画布颜色
 		// renderer.setClearColor(new THREE.Color(0x000000, 1.0));
 		renderer.setSize(1000, 500);
-		renderer.shadowMap.enabled = true;
+		renderer.shadowMapEnabled = true;
 
 		// create the ground plane
 		var planeGeometry = new THREE.PlaneGeometry(60, 40, 1, 1);

@@ -128,8 +128,8 @@ export default [
 						component: require('src/pages/canvas/threeJsModel5.vue')
 					},
 					{
-						path: 'threeJsModel6',
-						component: require('src/pages/canvas/threeJsModel6.vue')
+						path: 'stars',
+						component: require('src/pages/canvas/stars.vue')
 					},
 					{
 						path: 'deutser',

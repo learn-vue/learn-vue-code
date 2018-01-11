@@ -39,6 +39,10 @@ module.exports = {
 				label: '技术文章',
 				link: 'https://segmentfault.com/a/1190000007238999',
 				text: '前端路由的两种实现原理'
+			}, {
+				label: '文档手册',
+				link: 'http://sole.github.io/tween.js/examples/03_graphs.html',
+				text: 'tween.js运动曲线图'
 			}]
 		};
 	},

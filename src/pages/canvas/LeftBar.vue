@@ -32,8 +32,8 @@
 				<router-link to="/page/canvas/threeJsModel5" tag="li" exact>
 					<a>动态粒子2</a>
 				</router-link>
-				<router-link to="/page/canvas/threeJsModel6" tag="li" exact>
-					<a>模拟特效</a>
+				<router-link to="/page/canvas/stars" tag="li" exact>
+					<a>星空</a>
 				</router-link>
 				<router-link to="/page/canvas/deutser" tag="li" exact>
 					<a>模拟特效demo</a>

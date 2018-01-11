@@ -82,6 +82,10 @@ module.exports = {
 		}
 		renderScene();
 	},
+	beforeDestroy () {
+		/*eslint-disable */
+		$('.dg.ac .main').remove();
+	},
 	methods: {
 		initStats () {
 			var stats = new Stats();
