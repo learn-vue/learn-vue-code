@@ -1,7 +1,6 @@
-<!-- 动态粒子2 canvas绘制元件 -->
+<!-- 星空 -->
 <template>
 	<div id="main">
-		<div><a href="http://sole.github.io/tween.js/examples/03_graphs.html">http://sole.github.io/tween.js/examples/03_graphs.html</a></div>
 		<div id="Stats-output">
 		</div>
 		<!-- Div which will hold the Output -->

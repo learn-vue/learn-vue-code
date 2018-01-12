@@ -1,3 +1,4 @@
+<!-- 图片 -->
 <template>
 	<div id="main">
 		<div id="Stats-output">
@@ -5,86 +6,50 @@
 		<!-- Div which will hold the Output -->
 		<div id="WebGL-output">
 		</div>
+		<div class="img-content">
+			<canvas id='cas' width="1000" height="500">您的浏览器不支持canvas，请更新浏览器后再浏览</canvas>
+			<div style="width:50px;margin:10px auto; display: none">
+				<img id="tulip" src="/static/images/logo.png" alt="The Tulip" width="200" height="200" />
+			</div>
+		</div>
 	</div>
 </template>
 
 <script>
 import * as THREE from 'three'
+import TWEEN from 'tween'
 import Stats from 'src/pages/canvas/libs/stats';
 import dat from 'src/pages/canvas/libs/dat.gui';
 import Util from 'assets/js/util'
-
+import GetImageData from 'src/pages/deutser/public/js/views/modules/particles/util/get.image.data'
+import Particles from 'src/pages/deutser/public/js/views/modules/hilgart/particle/n/particle.manager' // when your ready to swap to the new system
 module.exports = {
 	data: function(){
 		return {
+			PARTICLE_COUNT: 4000, // 1500,
+			CANVAS_TOUCH_PARTICLE_COUNT: 2000,
+			// 相机高度
+			CAMERA_Z: 1400,
+			IMAGE_Z: 2000,
+			Z_RANGE: 3000,
+			shapes: [
+				'static/images/1.png',
+				'static/images/2.png',
+				'static/images/3.png',
+				'static/images/4.png'
+			]
 		};
 	},
 	components: {
 	},
 	mounted () {
+		var me = this;
 		/*eslint-disable */
-		var stats = this.initStats();
-		var scene = new THREE.Scene();
-		var camera = new THREE.PerspectiveCamera(45, 1000 / 500, 0.1, 1000)
-		// create a render and set the size
-		var renderer = new THREE.WebGLRenderer();
-		renderer.setClearColor(0x000);
-		renderer.setSize(1000, 500)
-		var axes = new THREE.AxisHelper(80);
-		scene.add(axes);
-		// position and point the camera to the center of the scene
-		camera.position.x = 100;
-		camera.position.y = 0;
-		camera.position.z = 150;
-		camera.lookAt(scene.position);
-
-		createSprites();
-		function createSprites() {
-			var geom = new THREE.Geometry();
-			var material = new THREE.PointCloudMaterial({size: 4, vertexColors: true, color: 0xffffff});
-			for (var x = -5; x < 5; x++) {
-				for (var y = -5; y < 5; y++) {
-					var particle = new THREE.Vector3(x * 10, y * 10, 0);
-					geom.vertices.push(particle);
-					geom.colors.push(new THREE.Color(Math.random() * 0x00ffff));
-				}
-			}
-
-			var cloud = new THREE.PointCloud(geom, material);
-			scene.add(cloud);
-		}
-
-		// add the output of the renderer to the html element
-		document.getElementById('WebGL-output').appendChild(renderer.domElement);
-		// call the render function
-		var step = 0;
-		var controls = new function () {
-			this.x = 1;
-			this.y = 1;
-			this.reset = function () {
-				this.x = 0;
-				this.y = 0;
-			};
-		};
-		console.info(dat)
-		/*eslint-disable */
-		var gui = new dat.GUI();
-		gui.add(controls, 'x', 0, 100);
-		gui.add(controls, 'y', 0, 100);
-		function renderScene() {
-			stats.update();
-			camera.position.x = controls.x;
-			camera.position.y = controls.y;
-			camera.lookAt(scene.position);
-			/*eslint-disable */
-			requestAnimationFrame(renderScene);
-			renderer.render(scene, camera);
-		}
-		renderScene();
+		new Particles(me.shapes, document.body)
 	},
 	beforeDestroy () {
 		/*eslint-disable */
-		$('.dg.ac .main').remove();
+		// $('.dg.ac .main').remove();
 	},
 	methods: {
 		initStats () {
@@ -96,6 +61,37 @@ module.exports = {
 			stats.domElement.style.top = '0px';
 			document.getElementById('Stats-output').appendChild(stats.domElement);
 			return stats;
+		},
+		getImageData () {
+			var canvas = document.getElementById("cas"),
+			ctx = canvas.getContext("2d");
+			var img = document.getElementById("tulip");
+			ctx.drawImage(img, 0, 0);
+			// 图片数据
+			var imgData = ctx.getImageData(0, 0, 200, 200).data;
+			// 遍历所有点 绘制图形
+			var idx = null;
+			var skip = 6;
+			var logos = [];
+			for(var y = 0; y < 200; y += skip) {
+				for(var x = 0; x < 200; x += skip) {
+					idx = (x + y * 200) * 4 - 1;
+					if(imgData[idx] > 0) {
+						logos.push({
+							x: x,
+							y: y,
+							z: 20
+						});
+					}
+				}
+			}
+			return logos;
+		},
+		getCircle (context) {
+			var PI2 = Math.PI * 2;
+			context.beginPath();
+			context.arc( 0, 0, 0.5, 0, PI2, true );
+			context.fill();
 		}
 	}
 }
@@ -105,5 +101,8 @@ canvas{
 	display: block;
 	border: 1px solid;
 	margin: auto;
+}
+.img-content{
+	display: none;
 }
 </style>

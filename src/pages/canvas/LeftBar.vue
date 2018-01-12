@@ -12,7 +12,7 @@
 					<a>canvas时钟</a>
 				</router-link>
 				<router-link to="/page/canvas/test3" tag="li" exact>
-					<a>4444444444</a>
+					<a>Three中的图片处理</a>
 				</router-link>
 				<router-link to="/page/canvas/threeJsModel" tag="li" exact>
 					<a>threeJs模型</a>
